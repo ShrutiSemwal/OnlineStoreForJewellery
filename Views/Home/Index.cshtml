@@ -1,0 +1,277 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section Styles
+{
+
+    <style type="text/css">
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+
+        @@media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+
+            .heading,
+            .text-center,
+            .container,
+            .info {
+                margin: 0px;
+            }
+
+
+
+            body {
+                background-color: #F1F2F3;
+            }
+
+
+            .container {
+                max-width: 1500px;
+            }
+
+
+            .profile-card-6 {
+                max-width: 550px;
+                background-color: #c69d99;
+                border-radius: 5px;
+                box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                position: relative;
+                margin: 10px auto;
+                cursor: pointer;
+            }
+
+                .profile-card-6 img {
+                    transition: all 0.15s linear;
+                }
+
+                .profile-card-6 .profile-name {
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    font-size: 25px;
+                    font-weight: bold;
+                    color: #FFF;
+                    padding: 15px 20px;
+                    background: linear-gradient(140deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 0, 0) 50%);
+                    transition: all 0.15s linear;
+                }
+
+                .profile-card-6 .profile-position {
+                    position: absolute;
+                    color: rgba(255, 255, 255, 0.4);
+                    left: 30px;
+                    top: 100px;
+                    transition: all 0.15s linear;
+                }
+
+                .profile-card-6 .profile-overview {
+                    position: absolute;
+                    bottom: 0px;
+                    left: 0px;
+                    right: 0px;
+                    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 50%, rgba(255, 255, 0, 0));
+                    color: #FFF;
+                    padding: 50px 0px 20px 0px;
+                    transition: all 0.15s linear;
+                }
+
+                    .profile-card-6 .profile-overview h3 {
+                        font-weight: bold;
+                    }
+
+                    .profile-card-6 .profile-overview p {
+                        color: rgba(255, 255, 255, 0.7);
+                    }
+
+                .profile-card-6:hover img {
+                    filter: brightness(80%);
+                }
+
+                .profile-card-6:hover .profile-name {
+                    padding-left: 25px;
+                    padding-top: 20px;
+                }
+
+                .profile-card-6:hover .profile-position {
+                    left: 40px;
+                }
+
+                .profile-card-6:hover .profile-overview {
+                    padding-bottom: 25px;
+                }
+        }
+    </style>
+
+}
+
+
+<br />
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-6">
+            <h4 class="text-center"><strong></strong></h4>
+
+            <div class="profile-card-6">
+                <img src="https://aphrodite-store.com/wp-content/uploads/gold-ring-set-600x600.jpg" class="img img-responsive">
+                <div class="profile-name">
+                    RINGS
+
+                </div>
+                <div class="profile-position"></div>
+                <div class="profile-overview">
+                    <div class="profile-overview">
+                        <div class="row text-center">
+                            <div class="col-xs-4">
+                                <h3 class="heading">Explore More</h3>
+                               
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <h4 class="text-center"><strong></strong></h4>
+
+            <div class="profile-card-6">
+                <img src="https://i.pinimg.com/736x/12/95/42/129542cf9db54725125f842db617f7c1.jpg" class="img img-responsive">
+                <div class="profile-name">
+                    NECK PIECES
+
+                </div>
+                <div class="profile-position"></div>
+                <div class="profile-overview">
+                    <div class="profile-overview">
+                        <div class="row text-center">
+                            <div class="col-xs-4">
+                                <h3 class="heading">Explore More</h3>
+                            
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h4 class="text-center"><strong></strong></h4>
+
+            <div class="profile-card-6">
+                <img src="https://www.graff.com/dw/image/v2/BFNT_PRD/on/demandware.static/-/Sites-master-catalog/default/dw9176f747/images/hi-res/RGE1504_RGE1504_Model_2.jpg?sw=600&sh=600" class="img img-responsive">
+                <div class="profile-name">
+                    EARRINGS
+
+                </div>
+                <div class="profile-position"></div>
+                <div class="profile-overview">
+                    <div class="profile-overview">
+                        <div class="row text-center">
+                            <div class="col-xs-4">
+                                <h3 class="heading">Explore More</h3>
+                              
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <h4 class="text-center"><strong></strong></h4>
+
+            <div class="profile-card-6">
+                <img src="https://alexandani.imgix.net/products/bunny-kisses-and-easter-wishes-charm-bangle-bracelet-model-AA612822EWBSR.jpg?v=1646937674&auto=format&q=50&w=600" class="img img-responsive">
+                <div class="profile-name">
+                    BRACELETS
+
+                </div>
+                <div class="profile-position"></div>
+                <div class="profile-overview">
+                    <div class="profile-overview">
+                        <div class="row text-center">
+                            <div class="col-xs-4">
+                              <h3 class="heading">Explore More</h3>
+                              
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<br />
+<br />
+
+<!-- Marketing messaging and featurettes
+  ================================================== -->
+
+
+
+<div class="container marketing">
+
+    <div class="row">
+        <div class="col-lg-3">
+            <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="http://cdn.onlinewebfonts.com/svg/img_456253.png" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"/>
+             
+            <h4><i>Easy Returns</i></h4>
+            <p>
+                On Classic Ratna, items can be returned within 15 working days from the delivery of your order.<br />
+                Please know that the return taxes are paid by the recipient.
+            </p>
+
+        </div><!-- /.col-lg-3 -->
+        <div class="col-lg-3">
+            <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4DDJfnk0TybXApmn7SY2mfmPO-WLsVrb0aw&usqp=CAU"  role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"/>
+            <h4><i>Fast and free delivery</i></h4>
+            <p>Free delivery for all orders over 2000₹</p>
+
+        </div><!-- /.col-lg-3 -->
+        <div class="col-lg-3">
+            <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://cdn-icons-png.flaticon.com/128/81/81960.png" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"/>
+
+            <h4><i>100% Payment Secure</i></h4>
+            <p> Enhanced payment security measures for accepting online payments securely.</p>
+
+        </div><!-- /.col-lg-3 -->
+        <div class="col-lg-3">
+            <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCWCH4xgx1eGEt4Vj24W-e4YVgZNOp5_o6Vg&usqp=CAU" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"/>
+            <h4><i>Full time tracking</i></h4>
+            <p>No “approximate delivery dates.” Just real-time, accurate information.</p>
+
+        </div><!-- /.col-lg-3 -->
+    </div><!-- /.row -->
+</div>
+
+<br />
+<br />
+
+<center> <h2>GET YOUR SPARKLE ONE!</h2></center>
+
+<br />
+

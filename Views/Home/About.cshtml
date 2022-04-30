@@ -1,0 +1,232 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "About Us";
+}
+
+
+
+<h2>@ViewBag.Title</h2>
+@section Styles1{
+    <style type="text/css">
+
+
+        .about {
+            font-family: "Poppins", sans-serif;
+           
+            font-size: larger;
+        }
+
+
+
+        .our-team {
+            padding: 10px 0 20px;
+            margin-bottom: 30px;
+            background-color: #f7f5ec;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+            .our-team .picture {
+                display: inline-block;
+                height: 100px;
+                width: 100px;
+                margin-bottom: 50px;
+                z-index: 1;
+                position: relative;
+            }
+
+                .our-team .picture::before {
+                    content: "";
+                    width: 100%;
+                    height: 0;
+                    border-radius: 50%;
+                    background-color: #87413f;
+                    position: absolute;
+                    bottom: 135%;
+                    right: 0;
+                    left: 0;
+                    opacity: 0.9;
+                    transform: scale(3);
+                    transition: all 0.3s linear 0s;
+                }
+
+            .our-team:hover .picture::before {
+                height: 100%;
+            }
+
+            .our-team .picture::after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background-color: #87413f;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+
+            .our-team .picture img {
+                width: 100%;
+                height: auto;
+                border-radius: 50%;
+                transform: scale(1);
+                transition: all 0.9s ease 0s;
+            }
+
+            .our-team:hover .picture img {
+                box-shadow: 0 0 0 14px #c69d99;
+                transform: scale(0.7);
+            }
+
+            .our-team .title {
+                display: block;
+                font-size: 15px;
+                color: #4e5052;
+                text-transform: capitalize;
+            }
+
+            .our-team .social {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                background-color: #87413f;
+                position: absolute;
+                bottom: -100px;
+                left: 0;
+                transition: all 0.5s ease 0s;
+            }
+
+            .our-team:hover .social {
+                bottom: 0;
+            }
+
+            .our-team .social li {
+                display: inline-block;
+            }
+
+                .our-team .social li a {
+                    display: block;
+                    padding: 10px;
+                    font-size: 17px;
+                    color: white;
+                    transition: all 0.3s ease 0s;
+                    text-decoration: none;
+                }
+
+                    .our-team .social li a:hover {
+                        color: #87413f;
+                        background-color: #c69d99;
+                    }
+    </style>
+
+}
+
+   
+    <p class="about">
+        We launched this everstylish online store to provide customers around the world
+        with high quality, trendy and sparkly jewellery collections at reasonable rates that they
+        cherish for life.
+    </p>
+    <p class="about">
+        Each and every order we receive is carefully handled from start to finish
+        by a single representative.We want all of our customers to shop hassle-free with the same
+        friendly face each time they visit our site.
+    </p>
+
+    <p class="about">
+        Classic Ratna offers a wide scope of the decision in popular gems, current and chic
+        just as conventional and ethnic, combined with elevated requirements of virtue
+        and administration.
+    </p>
+    <p class="about">We welcome every one of you to go along with Classic Ratna the moment!</p>
+   
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="~/images/keshav.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Keshav Ranawat</h3>
+                        <h4 class="title">POD Leader</h4>
+                    </div>
+                    <ul class="social">
+
+                        <li><a href="" class="fa fa-linkedin" aria-hidden="true"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12  col-md-4">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="~/images/preksha.JPG">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Preksha Chaurasia</h3>
+                        <h4 class="title">POD Member</h4>
+                    </div>
+                    <ul class="social">
+
+                        <li><a href="" class="fa fa-linkedin" aria-hidden="true"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="~/images/shruti.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Shruti Semwal</h3>
+                        <h4 class="title">POD Member</h4>
+                    </div>
+                    <ul class="social">
+
+                        <li><a href="" class="fa fa-linkedin" aria-hidden="true"></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="https://picsum.photos/130/130?image=836">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Aakriti Mittal</h3>
+                        <h4 class="title">POD Member</h4>
+                    </div>
+                    <ul class="social">
+
+                        <li><a href="" class="fa fa-linkedin" aria-hidden="true"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12  col-md-6">
+                <div class="our-team">
+                    <div class="picture">
+                        <img class="img-fluid" src="~/images/akshat.jpeg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="name">Akshat Kumar</h3>
+                        <h4 class="title">POD Member</h4>
+                    </div>
+                    <ul class="social">
+
+                        <li><a href="" class="fa fa-linkedin" aria-hidden="true"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>

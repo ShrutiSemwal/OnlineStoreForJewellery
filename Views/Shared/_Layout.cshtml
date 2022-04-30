@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Online Store for Jewellery</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    @RenderSection("Styles", required: false)
+    @RenderSection("Styles1", required: false)
+</head>
+<body>
+    <header>
+        <nav class="navbar sticky-top fixed-top navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 " >
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center mb-2 mb-lg-0" asp-area="" asp-controller="Home" asp-action="Index">Classic Ratna</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark nav-link dropdown-toggle px-2" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Collections">Collections</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" role="menu">
+                                <li>  <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact"> All Jewellery </a></li>
+                                <li>  <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact"> New Arrivals </a></li>
+
+                                <li> <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Under 100</a></li>
+
+                                <li>  <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">The Casual look Collection</a></li>
+
+                                <li>  <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">The Vintage Collection</a></li>
+
+                                <li>  <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Trendy Oxidised Collection</a></li>
+
+                                <li>   <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">The Sparkly Trinkets Collection</a></li>
+
+                                <li> <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">The Function-night Collection</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark nav-link dropdown-toggle px-2" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Account">My Account</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li> <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Wishlist"> My Wishlist</a></li>
+
+                                <li>   <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Orders">My Orders</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
+                        </li>
+                    </ul>
+
+                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                        <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+                    </form>
+                    <div class="text-end ">
+                        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+
+
+                            <li>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Cart">Cart</a>
+                            </li>
+                            <li>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Login</a>
+                            </li>
+                            <li>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Signup</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="text-center text-lg-start text-dark"
+            style="background-color: #ECEFF1">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-between p-4 text-white"
+                 style="background-color: #87413f">
+            <!-- Left -->
+            <div class="me-5">
+                <span>Get connected with us on social networks:</span>
+            </div>
+            <!-- Left -->
+            <!-- Right -->
+            <div>
+                <a href="" class="text-white me-4">
+                    <i class="fa fa-facebook-f"></i>
+                </a>
+                <a href="" class="text-white me-4">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a href="" class="text-white me-4">
+                    <i class="fa fa-google"></i>
+                </a>
+                <a href="" class="text-white me-4">
+                    <i class="fa fa-instagram"></i>
+                </a>
+                <a href="" class="text-white me-4">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+                <a href="" class="text-white me-4">
+                    <i class="fa fa-github"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold">Classic Ratna</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #c69d99; height: 2px" />
+                        <p>
+                            Designed and Developed by POD-1 Group-11
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">Information</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #c69d99; height: 2px" />
+                        <p>
+                            <a href="#!" class="text-dark">About Us</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-dark">Privacy Policy</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-dark">Terms & Conditions</a>
+                        </p>
+                        
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">Useful links</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #c69d99; height: 2px" />
+                        <p>
+                            <a href="#!" class="text-dark">Your Account</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-dark">Delivery & Returns</a>
+                        </p>
+                        
+                        <p>
+                            <a href="#!" class="text-dark">Help</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">Contact</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #c69d99; height: 2px" />
+                        <p><i class="fa fa-home mr-3"></i> Dehradun, Uttarakhand, India</p>
+                        <p><i class="fa fa-envelope mr-3"></i> classicratna@gmail.com</p>
+                        <p><i class="fa fa-phone mr-3"></i>+91-987*******</p>
+                       
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+        <!-- Copyright -->
+        <div class="text-center p-3"
+             style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2022 Copyright:
+            <a class="text-dark" href="">ClassicRatna.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
