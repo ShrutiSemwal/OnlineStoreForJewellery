@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     @RenderSection("Styles", required: false)
     @RenderSection("Styles1", required: false)
+    @RenderSection("Styles2", required: false)
+    @RenderSection("Styles3", required: false)
+    @RenderSection("Styles4", required: false)
 </head>
 <body>
     <header>
@@ -60,6 +63,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
                         </li>
+                       
                     </ul>
 
                     <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
@@ -72,11 +76,12 @@
                             <li>
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Cart">Cart</a>
                             </li>
+                           
                             <li>
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Login</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login">Login</a>
                             </li>
                             <li>
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Signup</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Signup">Signup</a>
                             </li>
 
                         </ul>
