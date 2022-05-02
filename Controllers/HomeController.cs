@@ -62,6 +62,11 @@ namespace OnlineStoreForJewellery.Controllers
             return View();
         }
 
+        public IActionResult Rings()
+        {
+            return View("Views/Home/Categories/Rings.cshtml");
+        }
+
 
 
 
