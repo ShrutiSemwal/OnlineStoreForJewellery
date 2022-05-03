@@ -15,7 +15,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar sticky-top fixed-top navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 " >
+        <nav class="navbar sticky-top fixed-top navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 fixed-top " >
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center mb-2 mb-lg-0" asp-area="" asp-controller="Home" asp-action="Index">Classic Ratna</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -30,20 +30,20 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link text-dark nav-link dropdown-toggle px-2" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Collections">Collections</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" role="menu">
-                                <li>  <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact"> All Jewellery </a></li>
-                                <li>  <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact"> New Arrivals </a></li>
+                                <li>  <a class="nav-link text-dark" asp-area="Collections" asp-controller="Home" asp-action="All"> All Jewellery </a></li>
+                                <li>  <a class="nav-link text-dark" asp-area="Collections" asp-controller="Home" asp-action="New"> New Arrivals </a></li>
 
-                                <li> <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Under 100</a></li>
+                                <li> <a class="nav-link text-dark" asp-area="Collections" asp-controller="Home" asp-action="Under100">Under 100</a></li>
 
-                                <li>  <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">The Casual look Collection</a></li>
+                                <li>  <a class="nav-link text-dark" asp-area="Collections" asp-controller="Home" asp-action="CasualLook">The Casual look Collection</a></li>
 
-                                <li>  <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">The Vintage Collection</a></li>
+                                <li>  <a class="nav-link text-dark" asp-area="Collections" asp-controller="Home" asp-action="Vintage">The Vintage Collection</a></li>
 
-                                <li>  <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Trendy Oxidised Collection</a></li>
+                                <li>  <a class="nav-link text-dark" asp-area="Collections" asp-controller="Home" asp-action="Oxidised">Trendy Oxidised Collection</a></li>
 
-                                <li>   <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">The Sparkly Trinkets Collection</a></li>
+                                <li>   <a class="nav-link text-dark" asp-area="Collections" asp-controller="Home" asp-action="Trinkets">The Sparkly Trinkets Collection</a></li>
 
-                                <li> <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">The Function-night Collection</a></li>
+                                <li> <a class="nav-link text-dark" asp-area="Collections" asp-controller="Home" asp-action="FunctionNight">The Function-night Collection</a></li>
 
                             </ul>
                         </li>
@@ -51,9 +51,9 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link text-dark nav-link dropdown-toggle px-2" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Account">My Account</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li> <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Wishlist"> My Wishlist</a></li>
+                                <li> <a class="nav-link text-dark" asp-area="Account" asp-controller="Home" asp-action="Wishlist"> My Wishlist</a></li>
 
-                                <li>   <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Orders">My Orders</a></li>
+                                <li>   <a class="nav-link text-dark" asp-area="Account" asp-controller="Home" asp-action="Orders">My Orders</a></li>
 
                             </ul>
                         </li>
@@ -74,14 +74,14 @@
 
 
                             <li>
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Cart">Cart</a>
+                                <a class="nav-link text-dark" asp-area="Account" asp-controller="Home" asp-action="Cart">Cart</a>
                             </li>
                            
                             <li>
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login">Login</a>
+                                <a class="nav-link text-dark" asp-area="Auth" asp-controller="Home" asp-action="Login">Login</a>
                             </li>
                             <li>
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Signup">Signup</a>
+                                <a class="nav-link text-dark" asp-area="Auth" asp-controller="Home" asp-action="Signup">Signup</a>
                             </li>
 
                         </ul>
@@ -97,7 +97,7 @@
         </main>
     </div>
 
-    <footer class="text-center text-lg-start text-dark"
+    <footer class="text-center text-lg-start text-dark "
             style="background-color: #ECEFF1">
         <!-- Section: Social media -->
         <section class="d-flex justify-content-between p-4 text-white"

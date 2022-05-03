@@ -39,27 +39,27 @@ namespace OnlineStoreForJewellery.Controllers
 
         public IActionResult Cart()
         {
-            return View();
+            return View("Views/Home/Account/Cart.cshtml");
         }
 
         public IActionResult Checkout()
         {
-            return View();
+            return View("Views/Home/Account/Checkout.cshtml");
         }
 
         public IActionResult Payment()
         {
-            return View();
+            return View("Views/Home/Account/Payment.cshtml");
         }
 
         public IActionResult Login()
         {
-            return View();
+            return View("Views/Home/Auth/Login.cshtml");
         }
 
         public IActionResult Signup()
         {
-            return View();
+            return View("Views/Home/Auth/Signup.cshtml");
         }
 
         public IActionResult Rings()
@@ -67,6 +67,20 @@ namespace OnlineStoreForJewellery.Controllers
             return View("Views/Home/Categories/Rings.cshtml");
         }
 
+        public IActionResult Bracelets()
+        {
+            return View("Views/Home/Categories/Bracelets.cshtml");
+        }
+
+        public IActionResult Earrings()
+        {
+            return View("Views/Home/Categories/Earrings.cshtml");
+        }
+
+        public IActionResult Neckpieces()
+        {
+            return View("Views/Home/Categories/Neckpieces.cshtml");
+        }
 
 
 
