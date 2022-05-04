@@ -82,6 +82,12 @@ namespace OnlineStoreForJewellery.Controllers
             return View("Views/Home/Categories/Neckpieces.cshtml");
         }
 
+        public IActionResult All()
+        {
+            return View("Views/Home/Collections/All.cshtml");
+        }
+
+
 
 
 

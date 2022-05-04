@@ -1,0 +1,17 @@
+﻿
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .catagories-side-menu {
+        width: 260px;
+    }
+
+    #wrapper.karl-side-menu-open {
+        left: 260px;
+    }
+
+
+    .shop_grid_product_area,
+    .single_product_desc {
+        margin-top: 100px;
+    }
+}
+
