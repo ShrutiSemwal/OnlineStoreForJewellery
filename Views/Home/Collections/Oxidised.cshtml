@@ -1,0 +1,277 @@
+﻿
+@{
+    ViewData["Title"] = "Oxidised Jewellery Collection";
+}
+<h1> Trendy Oxidised Jewellery Collection</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <!-- Core Style CSS -->
+    <link rel="stylesheet" href="~/css/core-style.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Responsive CSS -->
+    <link href="~/css/responsive.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="#wrapper">
+
+        <section class="shop_grid_area section_padding_100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-4 col-lg-3">
+                        <div class="shop_sidebar_area">
+
+                            <div class="widget size mb-50">
+                                <h6 class="widget-title mb-30">Filter by Gender</h6>
+                                <div class="widget-desc">
+                                    <ul class="d-flex justify-content-between">
+                                        <li><a href="#">Women</a></li>
+                                        <li><a href="#">Men</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="widget recommended">
+                                <h6 class="widget-title mb-30">Recommended</h6>
+
+                                <div class="widget-desc">
+                                    <!-- Single Recommended Product -->
+                                    <div class="single-recommended-product d-flex mb-30">
+                                        <div class="single-recommended-thumb mr-3">
+                                            <img src="http://cdn.shopify.com/s/files/1/2373/1241/products/WhatsAppImage2021-08-05at5.53.19PM.jpg?v=1628249206" alt="">
+                                        </div>
+                                        <div class="single-recommended-desc">
+                                            <h6>Oxidised Plated Jewellery Set</h6>
+                                            <p>₹775.00</p>
+                                        </div>
+                                    </div>
+                                    <!-- Single Recommended Product -->
+                                    <div class="single-recommended-product d-flex mb-30">
+                                        <div class="single-recommended-thumb mr-3">
+                                            <img src="https://res.cloudinary.com/purnesh/image/upload/w_540,f_auto,q_auto:eco,c_limit/81616579847789.jpg" alt="">
+                                        </div>
+                                        <div class="single-recommended-desc">
+                                            <h6>Black Metal Jewellery</h6>
+                                            <p>₹325.00</p>
+                                        </div>
+                                    </div>
+                                    <!-- Single Recommended Product -->
+                                    <div class="single-recommended-product d-flex">
+                                        <div class="single-recommended-thumb mr-3">
+                                            <img src="https://i.etsystatic.com/22635901/r/il/ce51a6/2314867403/il_340x270.2314867403_kog2.jpg" alt="">
+                                        </div>
+                                        <div class="single-recommended-desc">
+                                            <h6>Half-Moon Earrings</h6>
+                                            <p>₹250.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-8 col-lg-9">
+                        <div class="shop_grid_product_area">
+                            <div class="row">
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.2s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://www.anuradhaartjewellery.com/assets/images/product/111307/400/OMS-318_NET_RS-200_Q-6_41_white.jpeg" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹250.00</h4>
+                                        <p>Traditional Mangalsutra Set</p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.3s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="data:image/jpeg;base64,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" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹205.00</h4>
+                                        <p>Trendy Necklace with Oxidised Plating</p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+
+                                    </div>
+                                </div>
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://res.giftalove.com/resources/common/giftimages/productimage1/colorful-golden-drop-earrings_1.jpg" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹400.00</h4>
+                                        <p>Oxidised Jhumka Set</p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://www.anuradhaartjewellery.com/assets/images/product/110581/400/OXBE-50_NET_RS-525_2_BANGLES_2-8_Q-2_21_white.jpeg" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹250.00</h4>
+                                        <p>Fancy Silver Bangles </p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://res.cloudinary.com/hamstech/images/w_570,h_517/f_auto,q_auto/v1626433020/Hamstech%20App/Oxidised-Earrings/Oxidised-Earrings.jpg?_i=AA" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹200.00</h4>
+                                        <p>Mirror Earrings </p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://images-static.nykaa.com/media/catalog/product/d/b/db9498e8904306285111.jpg" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹800.00</h4>
+                                        <p>Fida Silver-Toned & Turquoise Blue Floral Designed Oxidised Jewellery Set </p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://cdn.igp.com/f_auto,q_auto,t_prodm/products/p-ganesha-engraved-oxidised-gold-finish-men-s-pendant-125292-m.jpg" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹395.00</h4>
+                                        <p>
+                                            Ganesha Engraved Oxidised Gold Finish Men's Pendant
+                                        </p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img width="300" height="300" src="https://cdn.igp.com/f_auto,q_auto,t_pnopt10prodlp/products/p-wolf-engraved-oxidised-silver-finish-men-s-pendant-125289-m.jpg" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹325.00</h4>
+                                        <p>Wolf Engraved Oxidised Silver Finish Men's Pendant </p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img width="300" height="300" src="https://5.imimg.com/data5/ANDROID/Default/2020/12/DQ/TF/PL/29359257/product-jpeg-500x500.jpg" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹85.00/pc</h4>
+                                        <p>Silver Jewellery Set </p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+
+</body>
+
+</html>
+
+
+
+
+

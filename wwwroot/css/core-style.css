@@ -1,27 +1,5 @@
 ﻿
 
-
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
-
-/* ------------------
-:: 2.0 Import All CSS
------------------- */
-
-@import "../css/bootstrap.min.css";
-@import "../css/owl.carousel.css";
-@import "../css/font-awesome.min.css";
-@import "../css/themify-icons.css";
-@import "../css/magnific-popup.css";
-@import "../css/animate.css";
-@import "../css/jquery-ui.min.css";
-
-/* -------------------
-:: 3.0 Common/Base CSS
-------------------- */
-
-
-
-
 a:focus {
     outline: 0 solid;
 }
@@ -34,7 +12,7 @@ a:focus {
     text-decoration: none;
     outline: none;
     color: #000000;
-    font-family: "Open Sans", sans-serif;
+   
     font-weight: 400;
 }
 
@@ -285,7 +263,7 @@ img {
     }
 
 /* -------------------
-:: 4.0 Wrapper CSS
+::  Wrapper CSS
 ------------------- */
 
 #wrapper {
@@ -318,7 +296,7 @@ img {
         }
 
 /* ------------------------
-:: 5.0 Header Area CSS
+::  Header Area CSS
 ------------------------ */
 
 .top_header_area {
@@ -537,15 +515,6 @@ img {
 :: 6.0 Side Menu Area CSS
 ------------------- */
 
-.catagories-side-menu {
-    background-color: #fff;
-    width: 300px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    z-index: 1;
-}
 
 #sideMenuClose {
     color: #fff;
@@ -652,8 +621,8 @@ img {
 .menu-content > li > a:before {
     width: 10px;
     height: 10px;
-    border: 1px solid #ff084e;
-    background-color: #ff084e;
+    border: 1px solid #87413f;
+    background-color: #87413f;
     border-radius: 2px;
     display: inline-block;
     margin-left: 10px;
@@ -721,252 +690,13 @@ img {
         margin-bottom: 0;
     }
 
-/* ---------------------
-:: 8.0 Welcome Area CSS
---------------------- */
 
-.single_slide {
-    background-position: center top;
-    background-size: cover;
-    position: relative;
-    z-index: 1;
-}
 
-.welcome_slide_text {
-    position: relative;
-    z-index: 1;
-}
 
-    .welcome_slide_text > h2,
-    .single_catagory_area h2 {
-        font-size: 92px;
-        letter-spacing: 0;
-        margin-left: -5px;
-        text-transform: uppercase;
-        color: #fff;
-        margin-bottom: 20px;
-    }
 
-    .welcome_slide_text h6,
-    .single_catagory_area h6 {
-        color: #fff;
-        font-size: 14px;
-        margin-bottom: 5px;
-    }
-
-.welcome_slides.owl-carousel .owl-dots {
-    position: absolute;
-    top: 50%;
-    left: 1%;
-    z-index: 5;
-    width: 30px;
-    background-color: transparent;
-    height: auto;
-    text-align: center;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-.welcome_slides.owl-carousel .owl-dot {
-    background-color: #fff;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    display: block;
-    height: 9px;
-    margin: 15px 10px;
-    width: 9px;
-}
-
-    .welcome_slides.owl-carousel .owl-dot.active {
-        background-color: #ff084e;
-        border-color: #ff084e;
-    }
-
-/* -----------------------------
-:: 9.0 Quickview Modal Area CSS
------------------------------ */
-
-#quickview button.close {
-    box-shadow: none;
-    position: absolute;
-    right: 15px;
-    text-align: right;
-    top: 10px;
-    z-index: 9;
-}
-
-.quickview_body {
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-}
-
-.quickview_pro_img {
-    border: 1px solid #f6f6f6;
-    position: relative;
-    width: 100%;
-    z-index: 1;
-}
-
-    .quickview_pro_img .hover_img {
-        left: 0;
-        opacity: 0;
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-        position: absolute;
-        top: -30px;
-        -webkit-transition-duration: 500ms;
-        transition-duration: 500ms;
-    }
-
-    .quickview_pro_img:hover .hover_img {
-        top: 0;
-        opacity: 1;
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    }
-
-.quickview_pro_des .title {
-    text-transform: capitalize;
-}
-
-.quickview_pro_des {
-    padding: 30px 0;
-}
-
-    .quickview_pro_des .price > span {
-        color: #888;
-        font-size: 14px;
-        text-decoration: line-through;
-    }
-
-    .quickview_pro_des > p {
-        font-size: 13px;
-    }
-
-    .quickview_pro_des > a {
-        color: #19b5fe;
-        font-size: 13px;
-        text-decoration: underline;
-    }
-
-.quickview_body .quantity > input {
-    -moz-appearance: textfield;
-    border: 1px solid #f6f6f6;
-    height: 35px;
-    text-align: center;
-    width: 40px;
-    font-size: 13px;
-}
-
-.quickview_body .quantity {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.quickview_body .cart {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.quickview_body .qty-plus,
-.quickview_body .qty-minus {
-    background-color: transparent;
-    border: 1px solid #f6f6f6;
-    color: #000;
-    cursor: pointer;
-    height: 35px;
-    text-align: center;
-    width: 22px;
-}
-
-.quickview_body .qty-plus {
-    border-left: 0 solid transparent;
-}
-
-.quickview_body .qty-minus {
-    border-right: 0 solid transparent;
-}
-
-.quickview_body .cart-submit {
-    background-color: #ff084e;
-    border: medium none;
-    color: #fff;
-    cursor: pointer;
-    font-size: 13px;
-    height: 35px;
-    margin-left: 15px;
-    width: 120px;
-    -webkit-transition-duration: 500ms;
-    transition-duration: 500ms;
-}
-
-    .quickview_body .cart-submit:hover {
-        background-color: #ff084e;
-        color: #fff;
-    }
-
-.quickview_body .qty-minus i,
-.quickview_body .qty-plus i {
-    color: #888;
-    font-size: 10px;
-    line-height: 33px;
-}
-
-.quickview_body .modal_pro_wishlist > a,
-.quickview_body .modal_pro_compare > a {
-    background-color: #e91e63;
-    color: #fff;
-    display: block;
-    height: 35px;
-    margin: 0 15px;
-    text-align: center;
-    width: 35px;
-    font-size: 22px;
-}
-
-    .quickview_body .modal_pro_wishlist > a:hover,
-    .quickview_body .modal_pro_compare > a:hover {
-        background-color: #000;
-        color: #fff;
-    }
-
-.quickview_body .modal_pro_compare > a {
-    background-color: #00bcd4;
-    margin: 0;
-}
-
-    .quickview_body .modal_pro_wishlist > a i,
-    .quickview_body .modal_pro_compare > a i {
-        line-height: 35px;
-    }
-
-.quickview_body .share_wf > p {
-    font-size: 13px;
-    margin-bottom: 5px;
-    text-transform: capitalize;
-}
-
-.quickview_body .share_wf ._icon > a {
-    color: #888;
-    font-size: 14px;
-    margin-right: 5px;
-}
-
-    .quickview_body .share_wf ._icon > a:hover {
-        color: #000;
-    }
-
-.quickview_body .top_seller_product_rating > i {
-    color: #ff9800;
-    font-size: 13px;
-}
 
 /* --------------------------
-:: 10.0 Top Catagory Area CSS
+::  Top Catagory Area CSS
 -------------------------- */
 
 .single_catagory_area {
@@ -1192,175 +922,16 @@ img {
         color: #fff;
     }
 
-/* -------------------
-:: 13.0 Testimonials CSS
-------------------- */
 
-.single-testimonial-area .quote {
-    font-size: 72px;
-    font-weight: 700;
-    color: #ff084e;
-    line-height: 1;
-}
 
-.single-testimonial-area h6 {
-    line-height: 2;
-    color: #9f9f9f;
-}
 
-.testimonial-info {
-    margin-top: 60px;
-}
 
-    .testimonial-info .tes-thumbnail {
-        width: 67px;
-        height: 67px;
-        border-radius: 50%;
-        margin-right: 20px;
-    }
+  
 
-        .testimonial-info .tes-thumbnail img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-        }
 
-    .testimonial-info .testi-data > p {
-        font-size: 14px;
-        text-align: left;
-        font-weight: 700;
-        margin-bottom: 0;
-    }
 
-    .testimonial-info .testi-data span {
-        font-size: 12px;
-        text-align: left;
-        display: block;
-        font-weight: 700;
-        color: #ff084e;
-    }
 
-.karl-testimonials-slides.owl-carousel .owl-dots {
-    position: absolute;
-    top: 50%;
-    left: -20%;
-    z-index: 5;
-    width: 30px;
-    background-color: transparent;
-    height: auto;
-    text-align: center;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
 
-.karl-testimonials-slides.owl-carousel .owl-dot {
-    border: 2px solid #9f9f9f;
-    border-radius: 50%;
-    display: block;
-    height: 9px;
-    margin: 15px 10px;
-    width: 9px;
-}
-
-    .karl-testimonials-slides.owl-carousel .owl-dot.active {
-        background-color: #ff084e;
-        border-color: #ff084e;
-    }
-
-/* ----------------------
-:: 14.0 Footer Area CSS
----------------------- */
-
-.footer_area {
-    background-color: #fff;
-    border-top: 2px solid #e5e5e5;
-    padding: 100px 0 50px;
-}
-
-.footer_content > p {
-    font-size: 14px;
-}
-
-    .footer_content > p:first-child {
-        margin-bottom: 30px;
-    }
-
-.footer_social_area > a {
-    display: inline-block;
-    font-size: 26px;
-    padding: 0 30px;
-}
-
-    .footer_social_area > a:hover {
-        -webkit-transform: translateY(-5px);
-        transform: translateY(-5px);
-        color: #ff084e;
-    }
-
-.footer_widget_menu a {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 10px;
-    text-transform: capitalize;
-    -webkit-transition-duration: 500ms;
-    transition-duration: 500ms;
-    font-weight: 600;
-}
-
-    .footer_widget_menu a:hover {
-        margin-left: 5px;
-    }
-
-    .footer_widget_menu a i {
-        padding-right: 5px;
-    }
-
-.subscribtion_form {
-    position: relative;
-    z-index: 1;
-}
-
-    .subscribtion_form .mail {
-        border: none;
-        border-radius: 0;
-        font-size: 12px;
-        height: 50px;
-        padding: 5px 15px;
-        width: 100%;
-        background-color: #f0eded;
-        color: #929191;
-        font-style: italic;
-    }
-
-    .subscribtion_form .submit {
-        background-color: #3a3a3a;
-        border: none;
-        border-radius: 0;
-        color: #fff;
-        cursor: pointer;
-        font-size: 14px;
-        height: 50px;
-        position: absolute;
-        right: 0;
-        text-transform: uppercase;
-        top: 0;
-        -webkit-transition-duration: 500ms;
-        transition-duration: 500ms;
-        padding: 0 30px;
-        font-weight: 700;
-    }
-
-        .subscribtion_form .submit:hover {
-            background-color: #ff084e;
-            color: #fff;
-        }
-
-.copywrite_text > p {
-    color: #9f9f9f;
-    font-size: 14px;
-    margin-top: 30px;
-    display: block;
-}
 
 /* ------------------------
 :: 15.0 Breadcumb Area CSS

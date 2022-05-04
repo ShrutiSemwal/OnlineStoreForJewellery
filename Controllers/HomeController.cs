@@ -87,6 +87,41 @@ namespace OnlineStoreForJewellery.Controllers
             return View("Views/Home/Collections/All.cshtml");
         }
 
+        public IActionResult New()
+        {
+            return View("Views/Home/Collections/New.cshtml");
+        }
+
+        public IActionResult Under100()
+        {
+            return View("Views/Home/Collections/Under100.cshtml");
+        }
+
+        public IActionResult CasualLook()
+        {
+            return View("Views/Home/Collections/CasualLook.cshtml");
+        }
+
+        public IActionResult Oxidised()
+        {
+            return View("Views/Home/Collections/Oxidised.cshtml");
+        }
+
+        public IActionResult Vintage()
+        {
+            return View("Views/Home/Collections/Vintage.cshtml");
+        }
+
+        public IActionResult Trinkets()
+        {
+            return View("Views/Home/Collections/Trinkets.cshtml");
+        }
+
+        public IActionResult FunctionNight()
+        {
+            return View("Views/Home/Collections/FunctionNight.cshtml");
+        }
+
 
 
 
