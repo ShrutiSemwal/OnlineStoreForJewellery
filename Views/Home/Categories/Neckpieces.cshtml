@@ -1,6 +1,377 @@
-﻿@*
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@{
-    ViewData["Title"] = "Neckpieces";
-}
+@{ ViewData["Title"] = "Neckpieces"; }
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <!-- Core Style CSS -->
+    <link rel="stylesheet" href="~/css/core-style.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Responsive CSS -->
+    <link href="~/css/responsive.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="#wrapper">
+
+
+        <section class="shop_grid_area section_padding_100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-4 col-lg-3">
+                        <div class="shop_sidebar_area">
+
+                            <div class="widget size mb-50">
+                                <h6 class="widget-title mb-30">Filter by Gender</h6>
+                                <div class="widget-desc">
+                                    <ul class="d-flex justify-content-between">
+                                        <li><a href="#">Women</a></li>
+                                        <li><a href="#">Men</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="widget recommended">
+                                <h6 class="widget-title mb-30">Recommended</h6>
+
+                                <div class="widget-desc">
+                                    <!-- Single Recommended Product -->
+                                    <div class="single-recommended-product d-flex mb-30">
+                                        <div class="single-recommended-thumb mr-3">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUlwlm_mjANup9mlOFHZH3c4E8BixeXA8GhK_n-NP8OW0S2QmYaX8Mn-j_yBYO4OLgC78&usqp=CAU" alt="">
+                                        </div>
+                                        <div class="single-recommended-desc">
+                                            <h6>Black Neckpieces</h6>
+                                            <p>₹300.00</p>
+                                        </div>
+                                    </div>
+                                    <!-- Single Recommended Product -->
+                                    <div class="single-recommended-product d-flex mb-30">
+                                        <div class="single-recommended-thumb mr-3">
+                                            <img src="https://i.pinimg.com/236x/f5/73/48/f573488aa6c46e5620838ebdc614c70c.jpg" alt="">
+                                        </div>
+                                        <div class="single-recommended-desc">
+                                            <h6>Men's Neckpieces</h6>
+                                            <p>₹500</p>
+                                        </div>
+                                    </div>
+                                    <!-- Single Recommended Product -->
+                                    <div class="single-recommended-product d-flex">
+                                        <div class="single-recommended-thumb mr-3">
+                                            <img src="https://5.imimg.com/data5/SELLER/Default/2020/10/OQ/FL/PJ/78493116/new-product-500x500.jpeg" alt="">
+                                        </div>
+                                        <div class="single-recommended-desc">
+                                            <h6>Wedding Neckpieces</h6>
+                                            <p>₹550</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-8 col-lg-9">
+                        <div class="shop_grid_product_area">
+                            <div class="row">
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.2s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://stylesatlife.com/wp-content/uploads/2020/03/Two-Tiered-Black-Bead-Gold-Chain.jpg" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹250.00</h4>
+                                        <p>Women's Gold Chain</p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.3s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://sc04.alicdn.com/kf/H8ee18683d10547c489632909fcc1825ca.jpg" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹158.00</h4>
+                                        <p>Gold NeckPieces</p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+
+                                    </div>
+                                </div>
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://www.jewelryshoppingguide.com/wp-content/uploads/2019/02/figaro-chain-amazon-1.jpg" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹450.00</h4>
+                                        <p>Men's NeckPieces </p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://therose.in/wp-content/uploads/2020/10/6STK20269_Main.jpg" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹580.00</h4>
+                                        <p>Bridal NeckPieces </p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://2.imimg.com/data2/OT/IF/MY-1107937/flower-necklace-flower-diamond-wedding-set-jewellery-supplies-and-wholeseller-500x500.jpg" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹325.00</h4>
+                                        <p>Fancy NeckSet</p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://assets0.mirraw.com/images/8882209/MLP30G_zoom.jpg?1618025845" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹515.00</h4>
+                                        <p>Groom NeckSet</p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://staticimg.titan.co.in/Tanishq/Catalog/51F1D1CPHAA00_1.jpg?impolicy=pqmed&imwidth=640" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹422.00</h4>
+                                        <p>Gold Chain </p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://30d01f9adcdd9ca8bb29-e7821b1789d66a252f67999ba68e5823.ssl.cf2.rackcdn.com/simple-diamond-pendant-mangalsutra-in-yellow-gold-MG-S8512-NL-YG.jpg" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹400.00</h4>
+                                        <p>MangalSutra </p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://5.imimg.com/data5/SI/QB/MY-23987104/latest-collection-diamond-necklace-for-women-500x500.jpg" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹300.00</h4>
+                                        <p>Gold's Fine Jewellery </p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://sencowebfiles.s3.ap-south-1.amazonaws.com/products/PXq4S4XUmj4vKo532gYlnEJOBWBBtm9rZFm4NyVJ.jpeg" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹469.00</h4>
+                                        <p>Gold NeckPiece </p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://stylesatlife.com/wp-content/uploads/2016/11/A-Gold-And-Diamond-Necklace-Set-2.jpg.webp" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹400.00</h4>
+                                        <p>Bridal NeckPiece </p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://rukminim1.flixcart.com/image/714/857/k6tniq80/necklace-chain/h/g/s/rjmala11-necklace-pourni-original-imafp77sv5jgcjxn.jpeg?q=50" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹599.00</h4>
+                                        <p>Groom Mala </p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0PEj6zTRvsOzNHcjJTWx0jieics0GBjwhNmcNx0igd-mWWE_uNARTtIzlm7_i8G0LaBY&usqp=CAU" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹299.00</h4>
+                                        <p>Silver NeckSet</p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://m.media-amazon.com/images/I/61KOP6AF5-L._UL1500_.jpg" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹369.00</h4>
+                                        <p>Simple Gold Necket</p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://m.media-amazon.com/images/I/81peu8WSLoL._UX569_.jpg" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹199.00</h4>
+                                        <p>Men's Silver Necklace</p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+</body>
+
+</html>
+
