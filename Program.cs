@@ -23,4 +23,4 @@ namespace OnlineStoreForJewellery
                     webBuilder.UseStartup<Startup>();
                 });
     }
-}
+
