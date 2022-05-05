@@ -1,6 +1,382 @@
-﻿@*
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@{
-    ViewData["Title"] = "Earrings";
-}
+@{ 
+    ViewData["Title"] = "Earrings"; 
+  }
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <!-- Core Style CSS -->
+    <link rel="stylesheet" href="~/css/core-style.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Responsive CSS -->
+    <link href="~/css/responsive.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="#wrapper">
+
+
+        <section class="shop_grid_area section_padding_100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-4 col-lg-3">
+                        <div class="shop_sidebar_area">
+
+                            <div class="widget size mb-50">
+                                <h6 class="widget-title mb-30">Filter by Gender</h6>
+                                <div class="widget-desc">
+                                    <ul class="d-flex justify-content-between">
+                                        <li><a href="#">Women</a></li>
+                                        <li><a href="#">Men</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="widget recommended">
+                                <h6 class="widget-title mb-30">Recommended</h6>
+
+                                <div class="widget-desc">
+                                    <!-- Single Recommended Product -->
+                                    <div class="single-recommended-product d-flex mb-30">
+                                        <div class="single-recommended-thumb mr-3">
+                                            <img src="https://m.media-amazon.com/images/I/51bCdZenu+L._AC_.jpg" alt="">
+                                        </div>
+                                        <div class="single-recommended-desc">
+                                            <h6>Disco Earrings</h6>
+                                            <p>₹128.00</p>
+                                        </div>
+                                    </div>
+                                    <!-- Single Recommended Product -->
+                                    <div class="single-recommended-product d-flex mb-30">
+                                        <div class="single-recommended-thumb mr-3">
+                                            <img src="https://cdn.shopify.com/s/files/1/0095/0517/7681/products/61H10hPaeFL._UL1500.jpg?v=1635698638" alt="">
+                                        </div>
+                                        <div class="single-recommended-desc">
+                                            <h6> Fancy Party Wear Earrings</h6>
+                                            <p>₹174.00</p>
+                                        </div>
+                                    </div>
+                                    <!-- Single Recommended Product -->
+                                    <div class="single-recommended-product d-flex">
+                                        <div class="single-recommended-thumb mr-3">
+                                            <img src="https://rukminim2.flixcart.com/image/800/960/jri3jww0/earring/k/4/k/dj209-divastri-original-imafd94f2sazwyu3.jpeg?q=50" alt="">
+                                        </div>
+                                        <div class="single-recommended-desc">
+                                            <h6>Jhumka</h6>
+                                            <p>₹160.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-8 col-lg-9">
+                        <div class="shop_grid_product_area">
+                            <div class="row">
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.2s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://i.pinimg.com/236x/3d/f5/5d/3df55d2d4832fa81b916cc8b260cb7d9--hoop-earrings-frost.jpg" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹440</h4>
+                                        <p>Gold Hoop Earrings</p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.3s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://n2.sdlcdn.com/imgs/j/o/h/Designer-Stylish-Party-Wear-Droop-SDL514298724-1-41463.jpg" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹158.00</h4>
+                                        <p> Droop Earings</p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+
+                                    </div>
+                                </div>
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://assets0.mirraw.com/images/7027179/image_zoom.jpeg?1557854677" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹350</h4>
+                                        <p>Pearl Earrings </p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://i5.walmartimages.com/asr/bd0cb6af-f90a-4e10-a7c5-d5a31d7d793f.a055c36c94b691a43b3613fad9782534.jpeg?odnHeight=450&odnWidth=450&odnBg=ffffff" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹400.00</h4>
+                                        <p>Trendy Small Square Earrings </p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://assetscdn1.paytm.com/images/catalog/product/J/JE/JEWSUKKHI-INCRESUKK21010AB03A5D8/a_10.jpg?imwidth=282&impolicy=hq" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹500.00</h4>
+                                        <p>Jhumka </p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://m.media-amazon.com/images/I/61zVxxIUYKL._UL1077_.jpg" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹510.00</h4>
+                                        <p>Half Rooped Drop Earrings </p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://m.media-amazon.com/images/I/812CAQ-lmQL._AC_UY625_.jpg" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹420.00</h4>
+                                        <p>Party Wear Earrings </p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://rukminim2.flixcart.com/image/714/857/j5ws0i80/earring/m/2/z/ear-299-a0707-jewelz-original-imaewhjkmpgf4wkm.jpeg?q=50" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹455.00</h4>
+                                        <p>Star Shape Hanging Earrings </p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://sc04.alicdn.com/kf/HTB1_8BRXyLrK1Rjy1zdq6ynnpXaY.jpg" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹250.00</h4>
+                                        <p>Stud Earrings </p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://media6.ppl-media.com/tr:h-750,w-750,c-at_max/static/img/product/157465/crunchy-fashion-black-flower-crystal-earrings_2_display_1543474604_2d1fa5df.jpg" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹310.00</h4>
+                                        <p>Flower Crystal Earrings </p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://m.media-amazon.com/images/I/51-AXbypv6L._AC_SY580_.jpg" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹515.00</h4>
+                                        <p>Wedding Jhumka Earrings </p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="http://sc04.alicdn.com/kf/H4ddf124fe5aa4454abdf35c66d22ff90v.jpg" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹485.00</h4>
+                                        <p>Jhumka Earrings </p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://cf.shopee.in/file/526bd2ab2ab80ac49e4b1c09199b032a" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹371.00</h4>
+                                        <p>Fancy Earrings </p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://image.made-in-china.com/44f3j00JkqTuHpRYGoy/Colorful-Layered-Tassel-Earrings-Bohemian-Dangle-Drop-Earrings-for-Women-Girls.jpg" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹251.00</h4>
+                                        <p>Colorful Layered Earrings </p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+                                <!-- Single gallery Item -->
+                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <!-- Product Image -->
+                                    <div class="product-img">
+                                        <img src="https://cdn.shopify.com/s/files/1/0049/7490/3370/products/C14DA33C-46AC-4043-8E79-5C9BF027D4FC_1200x.jpg?v=1629141301" alt="">
+                                        <div class="product-quicview">
+                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Product Description -->
+                                    <div class="product-description">
+                                        <h4 class="product-price">₹490.00</h4>
+                                        <p>Stylish Earrings </p>
+                                        <!-- Add to Cart -->
+                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+</body>
+
+</html>
+
