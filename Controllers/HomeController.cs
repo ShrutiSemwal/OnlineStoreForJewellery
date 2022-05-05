@@ -42,6 +42,12 @@ namespace OnlineStoreForJewellery.Controllers
             return View("Views/Home/Account/Cart.cshtml");
         }
 
+        public IActionResult Wishlist()
+        {
+            return View("Views/Home/Account/Wishlist.cshtml");
+        }
+
+
         public IActionResult Checkout()
         {
             return View("Views/Home/Account/Checkout.cshtml");
