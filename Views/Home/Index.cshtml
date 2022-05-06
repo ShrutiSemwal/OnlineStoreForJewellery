@@ -111,12 +111,383 @@
                 .profile-card-6:hover .profile-overview {
                     padding-bottom: 25px;
                 }
-        }     
+
+            .slider_section {
+                height: calc(100% - 70px);
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                position: relative;
+            }
+
+                .slider_section .row {
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                }
+
+                .slider_section .design-box {
+                    position: absolute;
+                    bottom: 0;
+                    -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                    left: 0;
+                    width: 75px;
+                }
+
+                    .slider_section .design-box img {
+                        width: 100%;
+                    }
+
+                .slider_section .slider_number-container {
+                   
+                    position: absolute;
+                    top: 45%;
+                    -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                    right: 4%;
+                    text-align: center;
+                    opacity: .6;
+                }
+
+                    .slider_section .slider_number-container hr {
+                        width: 1px;
+                        height: 50px;
+                        border: none;
+                        background-color: #ffffff;
+                    }
+
+                    .slider_section .slider_number-container .number-box {
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-orient: vertical;
+                        -webkit-box-direction: normal;
+                        -ms-flex-direction: column;
+                        flex-direction: column;
+                        -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                        justify-content: center;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        color: #ffffff;
+                        text-transform: uppercase;
+                    }
+
+                .slider_section .detail_box h2 {
+                    margin-bottom: 0;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                }
+
+                    .slider_section .detail_box h2 span {
+                        margin-right: 10px;
+                    }
+
+                    .slider_section .detail_box h2 hr {
+                        margin: 0;
+                        border: none;
+                        width: 55px;
+                        height: 1px;
+                        background-color: #000000;
+                    }
+
+                .slider_section .detail_box h1 {
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    font-size: 5rem;
+                    margin-bottom: 30px;
+                }
+
+                .slider_section .detail_box a {
+                    display: inline-block;
+                    padding: 8px 40px;
+                    background-color: #0d0806;
+                    border: 1px solid #0d0806;
+                    color: #ffffff;
+                    border-radius: 0;
+                    margin: 35px 0;
+                }
+
+                    .slider_section .detail_box a:hover {
+                        background-color: transparent;
+                        color: #0d0806;
+                    }
+
+                .slider_section .img-box img {
+                    width: 100%;
+                }
+
+                .slider_section .carousel-indicators {
+                    padding: 0;
+                    margin: 0;
+                    right: initial;
+                    bottom: 22%;
+                    left: 17%;
+                }
+
+                    .slider_section .carousel-indicators li {
+                        text-indent: 0;
+                        width: auto;
+                        height: auto;
+                        opacity: 1;
+                        background-color: transparent;
+                        border: none;
+                        color: #c0c0c0;
+                        font-size: 24px;
+                        display: none;
+                    }
+
+                        .slider_section .carousel-indicators li.active {
+                            display: block;
+                        }
+
+                        @@media (max-width: 768px) {
+
+
+  .slider_section {
+    padding: 45px 0;
+  }
+}
+
+                        @@media (max-width: 576px) {
+  .slider_section .detail_box {
+    text-align: center;
+  }
+
+  .slider_section .detail_box h1 {
+    font-size: 4rem;
+  }
+
+}
+        }
     </style>
 
 }
 
+<!-- slider section -->
+<section class=" slider_section position-relative">
+    <div class="design-box">
+        <img src="" alt="">
+    </div>
+   
+    <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">01</li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1">02</li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2">03</li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2">04</li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2">05</li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2">06</li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2">07</li>
+            </ol>
+            <div class="carousel-inner">
 
+                <div class="carousel-item active ">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="detail_box">
+                                <h2>
+                                    <span> New Arrivals</span>
+                                    <hr>
+                                </h2>
+                                <h1>
+                                    Jewellery
+                                </h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet consec tetur adipiscing elit elit at felislacinia
+                                    aptent taciti sociosqu ad litora torquent per conubia nostra
+                                </p>
+                                <div>
+                                    <a asp-area="Collections" asp-controller="Home" asp-action="New">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="img-box">
+                                <img src="https://cdn.shopify.com/s/files/1/0725/9895/products/PearlEarCuff-Model_1e6f5526-a3ef-474c-8a68-469dbc097eea_1024x1024.jpg?v=1639138253" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="detail_box">
+                                <h2>
+                                    <span>  Sparkly Trinkets Collection</span>
+                                    <hr>
+                                </h2>
+                                <h1>
+                                    Jewellery
+                                </h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet consec tetur adipiscing elit elit at felislacinia
+                                    aptent taciti sociosqu ad litora torquent per conubia nostra
+                                </p>
+                                <div>
+                                    <a asp-area="Collections" asp-controller="Home" asp-action="Trinkets">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="img-box">
+                                <img src="https://img.joomcdn.net/01fc5e0f03c60cf366fcc1e3a3fad0737273a590_original.jpeg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="detail_box">
+                                <h2>
+                                    <span> The Function-Night Collection</span>
+                                    <hr>
+                                </h2>
+                                <h1>
+                                    Jewellery
+                                </h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet consec tetur adipiscing elit elit at felislacinia
+                                    aptent taciti sociosqu ad litora torquent per conubia nostra
+                                </p>
+                                <div>
+                                    <a asp-area="Collections" asp-controller="Home" asp-action="FunctionNight">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="img-box">
+                                <img src="https://jdinstitute.co/wp-content/uploads/2022/03/Trendy-Jewellery-Designs-That-You-Must-Have-scaled.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="detail_box">
+                                <h2>
+                                    <span> Vintage Collection</span>
+                                    <hr>
+                                </h2>
+                                <h1>
+                                    Jewellery
+                                </h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet consec tetur adipiscing elit elit at felislacinia
+                                    aptent taciti sociosqu ad litora torquent per conubia nostra
+                                </p>
+                                <div>
+                                    <a asp-area="Collections" asp-controller="Home" asp-action="Vintage">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="img-box">
+                                <img src="https://www.sukra.com/wp-content/uploads/antique-jewellery/aq18.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="detail_box">
+                                <h2>
+                                    <span> Trendy Oxidised Collection</span>
+                                    <hr>
+                                </h2>
+                                <h1>
+                                    Jewellery
+                                </h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet consec tetur adipiscing elit elit at felislacinia
+                                    aptent taciti sociosqu ad litora torquent per conubia nostra
+                                </p>
+                                <div>
+                                    <a asp-area="Collections" asp-controller="Home" asp-action="Oxidised">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="img-box">
+                                <img src="https://images-static.nykaa.com/media/catalog/product/4/9/4984290yctjns-32oxdchk-sl_1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="detail_box">
+                                <h2>
+                                    <span> Under 100₹ Collection</span>
+                                    <hr>
+                                </h2>
+                                <h1>
+                                    Jewellery
+                                </h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet consec tetur adipiscing elit elit at felislacinia
+                                    aptent taciti sociosqu ad litora torquent per conubia nostra
+                                </p>
+                                <div>
+                                    <a asp-area="Collections" asp-controller="Home" asp-action="Under100">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="img-box">
+                                <img src="https://cdn.shopify.com/s/files/1/1223/0734/products/ramona-necklace-set-necklace-sets-blingvine-125687_1000x.jpg?v=1636530239" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="detail_box">
+                                <h2>
+                                    <span> The Casual Look Collection</span>
+                                    <hr>
+                                </h2>
+                                <h1>
+                                    Jewellery
+                                </h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet consec tetur adipiscing elit elit at felislacinia
+                                    aptent taciti sociosqu ad litora torquent per conubia nostra
+                                </p>
+                                <div>
+                                    <a asp-area="Collections" asp-controller="Home" asp-action="CasualLook">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="img-box">
+                                <img src="http://cdn.shopify.com/s/files/1/2556/2568/products/VJIMG0153_copy_ebd502fa-d023-48ea-874d-7d577105dd37_large.jpg?v=1581413520" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- end slider section -->
 
 
 <br />
@@ -151,7 +522,7 @@
             <h4 class="text-center"><strong></strong></h4>
 
             <div class="profile-card-6">
-                <img src="https://i.pinimg.com/736x/12/95/42/129542cf9db54725125f842db617f7c1.jpg" class="img img-responsive">
+                <img src="http://cdn.shopify.com/s/files/1/0504/4479/6073/collections/neckpieces-banner_1200x1200.jpg?v=1605787286" class="img img-responsive">
                 <div class="profile-name">
                     NECK PIECES
 
@@ -250,7 +621,7 @@
 
         </div><!-- /.col-lg-3 -->
         <div class="col-lg-3">
-            <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4DDJfnk0TybXApmn7SY2mfmPO-WLsVrb0aw&usqp=CAU" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false" />
+            <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://www.seekpng.com/png/detail/828-8282035_delivery-truck-delivery-van-icon.png" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false" />
             <h4><i>Fast and free delivery</i></h4>
             <p>Free delivery for all orders over 2000₹</p>
 
@@ -263,7 +634,7 @@
 
         </div><!-- /.col-lg-3 -->
         <div class="col-lg-3">
-            <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCWCH4xgx1eGEt4Vj24W-e4YVgZNOp5_o6Vg&usqp=CAU" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false" />
+            <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://www.inventicons.com/uploads/iconset/1379/wm/512/Time-Tracking-39.png" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false" />
             <h4><i>Full time tracking</i></h4>
             <p>No “approximate delivery dates.” Just real-time, accurate information.</p>
 
