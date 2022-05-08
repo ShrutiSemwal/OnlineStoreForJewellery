@@ -190,7 +190,7 @@ namespace OnlineStoreForJewellery.Controllers
 
 
                 //Create nerwork credential and you need to give from email address and password
-                NetworkCredential networkCredential = new NetworkCredential("shrutisemwal956@gmail.com", "1609_shrutisemwal@");
+                NetworkCredential networkCredential = new NetworkCredential("shrutisemwal956@gmail.com", "");
                 smtpClient.UseDefaultCredentials = false;
                 smtpClient.Credentials = networkCredential;
                 smtpClient.Port = 587; // this is default port number - you can also change this
