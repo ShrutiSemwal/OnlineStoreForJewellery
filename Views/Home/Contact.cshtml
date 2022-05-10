@@ -36,7 +36,25 @@
             <div class="col">
                 <div id="google_map">
                     <div class="map_container">
-                        <div id="map"></div>
+                        <div id="map">
+                            <script>
+                                let map;
+
+                                function initMap() {
+                                    map = new google.maps.Map(document.getElementById("map"), {
+                                        center: { lat: 28.459497, lng: 77.026634 },
+                                        zoom: 7,
+                                        gestureHandling: 'greedy',
+                                        zoomControl: true
+                                    });
+                                }
+
+                                window.initMap = initMap;
+                            </script>
+                            <script async
+                                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuv308Fozf9PEpZhsBGT_3HMxWSuc34NE&callback=initMap">
+                            </script>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -96,39 +114,38 @@
                 <div class="get_in_touch_contents">
                     <h1>Get In Touch With Us!</h1>
                     <p>Fill out the form below for any query.</p>
-                    <h4>@ViewBag.Message</h4>
-                    <form method="post">
+                    <form method="post" action="Contact">
                         <div>
-                            <input id="input_name"
-                                   asp-for="@Model.Name"
-                                   class=" form-control   form_input input_name input_ph"
-                                   type="text"
-                                   name="Name"
-                                   placeholder="Name" />
-                            <span class="text-danger" asp-validation-for="@Model.Name"></span>
+
                             <input id="input_email"
-                                   asp-for="@Model.Email"
-                                   class="form-control form_input input_email input_ph"
+                                   class="form_input input_email input_ph"
                                    type="email"
-                                   name="Email"
-                                   placeholder="Email" />
-                            <span class="text-danger" asp-validation-for="@Model.Email"></span>
+                                   name="email"
+                                   placeholder="Email"
+                                   required="required"
+                                   data-error="Valid email is required." />
+                            <input id="input_name"
+                                   class="form_input input_name input_ph"
+                                   type="text"
+                                   name="subject"
+                                   placeholder="Subject"
+                                   required="required"
+                                   data-error="Subject is required." />
 
                             <textarea id="input_message"
-                                      asp-for="@Model.Message"
                                       class="input_ph input_message"
-                                      name="Message"
+                                      name="message"
                                       placeholder="Message"
-                                      rows="3"></textarea>
-                            <span class="text-danger" asp-validation-for="@Model.Message"></span>
+                                      rows="3"
+                                      required
+                                      data-error="Please, write us a message."></textarea>
                         </div>
                         <div>
                             <button id="review_submit"
                                     type="submit"
-                                    style="background-color: #87413f"
                                     class="red_button message_submit_btn trans_300"
-                                    value="Send">
-                                send mail
+                                    value="Submit">
+                                send message
                             </button>
                         </div>
                     </form>
