@@ -44,6 +44,57 @@ namespace OnlineStoreForJewellery.Controllers
             return View();
         }
 
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Contact(string email, string subject, string message)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var senderEmail = new MailAddress("classicratna.inc@gmail.com", "Classic Ratna");
+                    var receiverEmail = new MailAddress(email, "Receiver");
+
+                    var password = "zxcvbnm2022";
+                    var sub = subject;
+                    var body = message;
+
+                    var smtp = new SmtpClient
+                    {
+                        Host = "smtp.gmail.com",
+                        Port = 587,
+                        EnableSsl = true,
+                        DeliveryMethod = SmtpDeliveryMethod.Network,
+                        UseDefaultCredentials = false,
+                        Credentials = new System.Net.NetworkCredential(senderEmail.Address, password)
+                    };
+
+                    using (var mess = new MailMessage(senderEmail, receiverEmail)
+                    {
+                        Subject = subject,
+                        Body = body
+                    }
+                    )
+                    {
+                        smtp.Send(mess);
+                    }
+
+                    return View();
+
+                }
+            }
+            catch (Exception)
+            {
+                ViewBag.Error = "There are some problems is sending Email";
+            }
+
+            return View();
+        }
+
 
         public IActionResult Cart()
         {
@@ -137,21 +188,10 @@ namespace OnlineStoreForJewellery.Controllers
         }
 
 
-
-
-
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-
-       
-        public IActionResult Contact()
-        {
-           
-            return View();
         }
 
         
