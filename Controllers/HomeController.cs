@@ -117,15 +117,7 @@ namespace OnlineStoreForJewellery.Controllers
             return View("Views/Home/Account/Payment.cshtml");
         }
 
-        public IActionResult Login()
-        {
-            return View("Views/Home/Auth/Login.cshtml");
-        }
-
-        public IActionResult Signup()
-        {
-            return View("Views/Home/Auth/Signup.cshtml");
-        }
+       
 
         public IActionResult Rings()
         {

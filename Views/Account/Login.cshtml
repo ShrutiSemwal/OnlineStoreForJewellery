@@ -1,6 +1,7 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
+@model OnlineStoreForJewellery.ViewModel.LoginViewModel
 @section Styles3{
 <style type="text/css">
     .divider:after,
@@ -25,23 +26,24 @@
                      class="img-fluid" alt="Phone image">
             </div>
             <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-                <form>
+                <form method="post">
+                    <div asp-validation-summary="All" class="text-danger"></div>
                     <!-- Email input -->
                     <div class="form-outline mb-4">
-                        <input type="email" id="form1Example13" class="form-control form-control-lg" />
-                        <label class="form-label" for="form1Example13">Email address</label>
+                        <input asp-for="Email" type="email" id="Email" class="form-control form-control-lg" />
+                        <label class="form-label" asp-for="Email">Email address</label>
                     </div>
 
                     <!-- Password input -->
                     <div class="form-outline mb-4">
-                        <input type="password" id="form1Example23" class="form-control form-control-lg" />
-                        <label class="form-label" for="form1Example23">Password</label>
+                        <input asp-for="Password" type="password" id="Password" class="form-control form-control-lg" />
+                        <label class="form-label" asp-for="Password">Password</label>
                     </div>
 
-                   
+
 
                     <!-- Submit button -->
-                    <button type="submit" class="btn btn-primary btn-lg btn-block"  style="background-color: #87413f ">Login</button>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" style="background-color: #87413f ">Login</button>
 
                     <div class="divider d-flex align-items-center my-4">
                         <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
@@ -51,7 +53,7 @@
                        role="button">
                         <i class="fa fa-facebook me-2"></i>  Continue with Facebook
                     </a>
-                    <a class="btn btn-primary btn-lg btn-block"  style="background-color: #87413f " href="#!"
+                    <a class="btn btn-primary btn-lg btn-block" style="background-color: #87413f " href="#!"
                        role="button">
                         <i class="fa fa-google me-2"></i>  Continue with Google
                     </a>

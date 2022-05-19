@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,12 +18,13 @@
     <header>
         <nav class="navbar sticky-top fixed-top navbar-expand-sm navbar-toggleable-sm navbar-dark border-bottom box-shadow mb-3 fixed-top " style="background-color: #87413f; position: fixed; top: 0; width: 100%;">
             <div class="container">
-              <a class="navbar-brand d-flex align-items-center mb-2 mb-lg-0" asp-area="" asp-controller="Home" asp-action="Index">Classic Ratna</a>
+                <a class="navbar-brand d-flex align-items-center mb-2 mb-lg-0" asp-area="" asp-controller="Home" asp-action="Index">Classic Ratna</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse ">
+                   
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
@@ -70,22 +72,35 @@
                         <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
                     </form>
                     <div class="text-end ">
+                        
                         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-
 
                             <li>
                                 <a class="nav-link text-light" asp-area="Account" asp-controller="Home" asp-action="Cart"><img src="https://www.freeiconspng.com/thumbs/cart-icon/basket-cart-icon-27.png" width="50px" height="40px" /></a>
                             </li>
 
-                            <li>
-                                <a class="nav-link text-light" asp-area="Auth" asp-controller="Home" asp-action="Login">Login</a>
-                            </li>
-                            <li>
-                                <a class="nav-link text-light" asp-area="Auth" asp-controller="Home" asp-action="Signup">Signup</a>
-                            </li>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <li>
+                                    <a class="nav-link text-light" asp-area="" asp-controller="Account" asp-action="Logout">Logout</a>
+                                </li>
 
+                            }
+
+                            else
+                            {
+                                <li>
+                                    <a class="nav-link text-light" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                                </li>
+
+
+
+                            <li>
+                                <a class="nav-link text-light" asp-area="" asp-controller="Account" asp-action="Register">Signup</a>
+                            </li>
+                            }
                         </ul>
-
+                        
                     </div>
                 </div>
             </div>
@@ -194,7 +209,7 @@
                     </div>
                     <!-- Grid column -->
                 </div>
-                
+
                 <!-- Grid row -->
             </div>
         </section>
