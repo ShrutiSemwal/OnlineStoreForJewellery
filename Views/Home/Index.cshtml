@@ -568,8 +568,7 @@
         </div>
 
         <div class="col-md-6">
-            @foreach (var product in Model)
-            {
+            
                 <h4 class="text-center"><strong></strong></h4>
 
                 <div class="profile-card-6">
@@ -583,7 +582,7 @@
                         <div class="profile-overview">
                             <div class="row text-center">
                                 <div class="col-xs-4">
-                                    <a class="nav-link text-white" asp-route-productId="@product.Id" asp-area="Categories" asp-controller="Home" asp-action="Bracelets">   <h3 class="heading">Explore More</h3></a>
+                                    <a class="nav-link text-white"  asp-area="Categories" asp-controller="Home" asp-action="Bracelets">   <h3 class="heading">Explore More</h3></a>
 
                                 </div>
 
@@ -591,7 +590,7 @@
                         </div>
                     </div>
                 </div>
-            }
+            
             </div>
 
     </div>
