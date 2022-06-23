@@ -1,6 +1,5 @@
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+
+@model ShoppingCart
 @{
     ViewData["Title"] = "Bracelets";
 }
@@ -20,305 +19,314 @@
 </head>
 
 <body>
-    <div id="#wrapper">
+    <form method="post">
+        <input hidden asp-for="ProductId" />
+        <div id="#wrapper">
 
 
-        <section class="shop_grid_area section_padding_100">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-4 col-lg-3">
-                        <div class="shop_sidebar_area">
+            <section class="shop_grid_area section_padding_100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-4 col-lg-3">
+                            <div class="shop_sidebar_area">
 
-                            <div class="widget size mb-50">
-                                <h6 class="widget-title mb-30">Filter by Gender</h6>
-                                <div class="widget-desc">
-                                    <ul class="d-flex justify-content-between">
-                                        <li><a href="#">Women</a></li>
-                                        <li><a href="#">Men</a></li>
+                                <div class="widget size mb-50">
+                                    <h6 class="widget-title mb-30">Filter by Gender</h6>
+                                    <div class="widget-desc">
+                                        <ul class="d-flex justify-content-between">
+                                            <li><a href="#">Women</a></li>
+                                            <li><a href="#">Men</a></li>
 
-                                    </ul>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="widget recommended">
-                                <h6 class="widget-title mb-30">Recommended</h6>
+                                <div class="widget recommended">
+                                    <h6 class="widget-title mb-30">Recommended</h6>
 
-                                <div class="widget-desc">
-                                    <!-- Single Recommended Product -->
-                                    <div class="single-recommended-product d-flex mb-30">
-                                        <div class="single-recommended-thumb mr-3">
-                                            <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVT-pPK8zVJzF2O7KmnB9v4NdboLIw7orfvNpi6VTTPk9genbc2kUT7QY8q4YMQm4aEqc&usqp=CAU"alt="">
+                                    <div class="widget-desc">
+                                        <!-- Single Recommended Product -->
+                                        <div class="single-recommended-product d-flex mb-30">
+                                            <div class="single-recommended-thumb mr-3">
+                                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVT-pPK8zVJzF2O7KmnB9v4NdboLIw7orfvNpi6VTTPk9genbc2kUT7QY8q4YMQm4aEqc&usqp=CAU" alt="">
+                                            </div>
+                                            <div class="single-recommended-desc">
+                                                <h6>Life InSignia Bracelet</h6>
+                                                <p>₹128.00</p>
+                                            </div>
                                         </div>
-                                        <div class="single-recommended-desc">
-                                            <h6>Life InSignia Bracelet</h6>
-                                            <p>₹128.00</p>
+                                        <!-- Single Recommended Product -->
+                                        <div class="single-recommended-product d-flex mb-30">
+                                            <div class="single-recommended-thumb mr-3">
+                                                <img src="data:image/jpeg;base64,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" alt="">
+                                            </div>
+                                            <div class="single-recommended-desc">
+                                                <h6>Men'sFine Bracelet</h6>
+                                                <p>₹124.00</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <!-- Single Recommended Product -->
-                                    <div class="single-recommended-product d-flex mb-30">
-                                        <div class="single-recommended-thumb mr-3">
-                                            <img src="data:image/jpeg;base64,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" alt="">
-                                        </div>
-                                        <div class="single-recommended-desc">
-                                            <h6>Men'sFine Bracelet</h6>
-                                            <p>₹124.00</p>
-                                        </div>
-                                    </div>
-                                    <!-- Single Recommended Product -->
-                                    <div class="single-recommended-product d-flex">
-                                        <div class="single-recommended-thumb mr-3">
-                                            <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/%7Bwidth%7D,%7Bheight%7D,quality=75,format=auto/in-resources/d48d3c82-1269-4214-9696-2661e542ec4e/Images/ProductImages/Source/BN17023467_1.jpg" alt="">
-                                        </div>
-                                        <div class="single-recommended-desc">
-                                            <h6>Gold Bracelet</h6>
-                                            <p>₹210.00</p>
+                                        <!-- Single Recommended Product -->
+                                        <div class="single-recommended-product d-flex">
+                                            <div class="single-recommended-thumb mr-3">
+                                                <img src="https://storage.sg.content-cdn.io/cdn-cgi/image/%7Bwidth%7D,%7Bheight%7D,quality=75,format=auto/in-resources/d48d3c82-1269-4214-9696-2661e542ec4e/Images/ProductImages/Source/BN17023467_1.jpg" alt="">
+                                            </div>
+                                            <div class="single-recommended-desc">
+                                                <h6>Gold Bracelet</h6>
+                                                <p>₹210.00</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-12 col-md-8 col-lg-9">
-                        <div class="shop_grid_product_area">
-                            <div class="row">
 
-                                <!-- Single gallery Item -->
-                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.2s">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <img src="https://i.pinimg.com/originals/a8/2c/31/a82c31892bce419fa917c8582de4cb6a.jpg" alt="">
-                                        <div class="product-quicview">
-                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                        <div class="col-12 col-md-8 col-lg-9">
+                            <div class="shop_grid_product_area">
+                                <div class="row">
+
+                                    <!-- Single gallery Item -->
+                                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.2s">
+                                        <!-- Product Image -->
+                                        <div class="product-img">
+                                            <img src="@Model.Product.ImageUrl" alt="">
+                                            <div class="product-quicview">
+                                                <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                        <!-- Product Description -->
+                                        <div class="product-description">
+                                            <h4 class="product-price">@Model.Product.Price.ToString("c")</h4>
+                                            <p>@Model.Product.Name</p>
+                                            <!-- Add to Cart -->
+                                            <div class="row pl-2">
+                                                <div class="col-2 text-primary add-to-cart-btn" style="height:50px;"><h4>Count</h4></div>
+                                                <div class="col-10"><input asp-for="Count" class="form-control" /></div>
+                                            </div>
+
+                                            <button type="submit" value="Add to Cart" class="add-to-cart-btn " style="height:50px;">Add to Cart</button>
                                         </div>
                                     </div>
-                                    <!-- Product Description -->
-                                    <div class="product-description">
-                                        <h4 class="product-price">₹585.00</h4>
-                                        <p>Diamond Bracelet</p>
-                                        <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
-                                    </div>
-                                </div>
 
-                                <!-- Single gallery Item -->
-                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.3s">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <img src="https://5.imimg.com/data5/LV/MI/SE/SELLER-2090301/silver-jewel-500x500.jpg" alt="">
-                                        <div class="product-quicview">
-                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                    <!-- Single gallery Item -->
+                                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.3s">
+                                        <!-- Product Image -->
+                                        <div class="product-img">
+                                            <img src="https://5.imimg.com/data5/LV/MI/SE/SELLER-2090301/silver-jewel-500x500.jpg" alt="">
+                                            <div class="product-quicview">
+                                                <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                        <!-- Product Description -->
+                                        <div class="product-description">
+                                            <h4 class="product-price">₹110.00</h4>
+                                            <p>Silver Bracelet</p>
+                                            <!-- Add to Cart -->
+                                            <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+
                                         </div>
                                     </div>
-                                    <!-- Product Description -->
-                                    <div class="product-description">
-                                        <h4 class="product-price">₹110.00</h4>
-                                        <p>Silver Bracelet</p>
-                                        <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
 
-                                    </div>
-                                </div>
-
-                                <!-- Single gallery Item -->
-                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <img src="https://www.purejewels.com/wp-content/uploads/2018/10/20838_1.png" alt="">
-                                        <div class="product-quicview">
-                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                    <!-- Single gallery Item -->
+                                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                        <!-- Product Image -->
+                                        <div class="product-img">
+                                            <img src="https://www.purejewels.com/wp-content/uploads/2018/10/20838_1.png" alt="">
+                                            <div class="product-quicview">
+                                                <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                        <!-- Product Description -->
+                                        <div class="product-description">
+                                            <h4 class="product-price">₹450.00</h4>
+                                            <p>Gold Gents Bracelet </p>
+                                            <!-- Add to Cart -->
+                                            <a href="#" class="add-to-cart-btn">ADD TO CART</a>
                                         </div>
                                     </div>
-                                    <!-- Product Description -->
-                                    <div class="product-description">
-                                        <h4 class="product-price">₹450.00</h4>
-                                        <p>Gold Gents Bracelet </p>
-                                        <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
-                                    </div>
-                                </div>
 
 
-                                <!-- Single gallery Item -->
-                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <img src="https://4.imimg.com/data4/DO/SD/MY-28372632/ladies-designer-bracelet-500x500.jpg" alt="">
-                                        <div class="product-quicview">
-                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                    <!-- Single gallery Item -->
+                                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                        <!-- Product Image -->
+                                        <div class="product-img">
+                                            <img src="https://4.imimg.com/data4/DO/SD/MY-28372632/ladies-designer-bracelet-500x500.jpg" alt="">
+                                            <div class="product-quicview">
+                                                <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                        <!-- Product Description -->
+                                        <div class="product-description">
+                                            <h4 class="product-price">₹220.00</h4>
+                                            <p>Designer Gold Bracelet</p>
+                                            <!-- Add to Cart -->
+                                            <a href="#" class="add-to-cart-btn">ADD TO CART</a>
                                         </div>
                                     </div>
-                                    <!-- Product Description -->
-                                    <div class="product-description">
-                                        <h4 class="product-price">₹220.00</h4>
-                                        <p>Designer Gold Bracelet</p>
-                                        <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
-                                    </div>
-                                </div>
 
 
-                                <!-- Single gallery Item -->
-                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <img src="https://cdn.shopify.com/s/files/1/0557/9158/3406/products/csbrm6.jpg?v=1625050022" alt="">
-                                        <div class="product-quicview">
-                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                    <!-- Single gallery Item -->
+                                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                        <!-- Product Image -->
+                                        <div class="product-img">
+                                            <img src="https://cdn.shopify.com/s/files/1/0557/9158/3406/products/csbrm6.jpg?v=1625050022" alt="">
+                                            <div class="product-quicview">
+                                                <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                        <!-- Product Description -->
+                                        <div class="product-description">
+                                            <h4 class="product-price">₹144.00</h4>
+                                            <p>Sterling Silver Bracelet </p>
+                                            <!-- Add to Cart -->
+                                            <a href="#" class="add-to-cart-btn">ADD TO CART</a>
                                         </div>
                                     </div>
-                                    <!-- Product Description -->
-                                    <div class="product-description">
-                                        <h4 class="product-price">₹144.00</h4>
-                                        <p>Sterling Silver Bracelet </p>
-                                        <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
-                                    </div>
-                                </div>
 
 
-                                <!-- Single gallery Item -->
-                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <img src="https://4.imimg.com/data4/TX/XP/ANDROID-42332860/product-500x500.jpeg" alt="">
-                                        <div class="product-quicview">
-                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                    <!-- Single gallery Item -->
+                                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                        <!-- Product Image -->
+                                        <div class="product-img">
+                                            <img src="https://4.imimg.com/data4/TX/XP/ANDROID-42332860/product-500x500.jpeg" alt="">
+                                            <div class="product-quicview">
+                                                <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                        <!-- Product Description -->
+                                        <div class="product-description">
+                                            <h4 class="product-price">₹321.00</h4>
+                                            <p>Ladies Bracelet</p>
+                                            <!-- Add to Cart -->
+                                            <a href="#" class="add-to-cart-btn">ADD TO CART</a>
                                         </div>
                                     </div>
-                                    <!-- Product Description -->
-                                    <div class="product-description">
-                                        <h4 class="product-price">₹321.00</h4>
-                                        <p>Ladies Bracelet</p>
-                                        <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
-                                    </div>
-                                </div>
 
 
-                                <!-- Single gallery Item -->
-                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <img src="https://cfcdn20.candere.com/media/catalog/product/cache/1/white_gold_default/414x/9df78eab33525d08d6e5fb8d27136e95/g/s/gs00110_1.jpg?v=1646647671" alt="">
-                                        <div class="product-quicview">
-                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                    <!-- Single gallery Item -->
+                                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                        <!-- Product Image -->
+                                        <div class="product-img">
+                                            <img src="https://cfcdn20.candere.com/media/catalog/product/cache/1/white_gold_default/414x/9df78eab33525d08d6e5fb8d27136e95/g/s/gs00110_1.jpg?v=1646647671" alt="">
+                                            <div class="product-quicview">
+                                                <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                        <!-- Product Description -->
+                                        <div class="product-description">
+                                            <h4 class="product-price">₹234.00</h4>
+                                            <p>Gold Bracelet </p>
+                                            <!-- Add to Cart -->
+                                            <a href="#" class="add-to-cart-btn">ADD TO CART</a>
                                         </div>
                                     </div>
-                                    <!-- Product Description -->
-                                    <div class="product-description">
-                                        <h4 class="product-price">₹234.00</h4>
-                                        <p>Gold Bracelet </p>
-                                        <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
-                                    </div>
-                                </div>
 
 
-                                <!-- Single gallery Item -->
-                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ_T3xY2UC6AInBsAkmC97Mc1AoLXnN95miUMD1jhG_VnVLj3FNsKlfZrYDLVc3CgBjrU&usqp=CAU" alt="">
-                                        <div class="product-quicview">
-                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                    <!-- Single gallery Item -->
+                                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                        <!-- Product Image -->
+                                        <div class="product-img">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ_T3xY2UC6AInBsAkmC97Mc1AoLXnN95miUMD1jhG_VnVLj3FNsKlfZrYDLVc3CgBjrU&usqp=CAU" alt="">
+                                            <div class="product-quicview">
+                                                <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                        <!-- Product Description -->
+                                        <div class="product-description">
+                                            <h4 class="product-price">₹399.00</h4>
+                                            <p>Stylish Bracelet </p>
+                                            <!-- Add to Cart -->
+                                            <a href="#" class="add-to-cart-btn">ADD TO CART</a>
                                         </div>
                                     </div>
-                                    <!-- Product Description -->
-                                    <div class="product-description">
-                                        <h4 class="product-price">₹399.00</h4>
-                                        <p>Stylish Bracelet </p>
-                                        <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
-                                    </div>
-                                </div>
 
 
-                                <!-- Single gallery Item -->
-                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <img src="https://3.imimg.com/data3/XI/KA/GLADMIN-1008/gold-bracelets-500x500.png" alt="">
-                                        <div class="product-quicview">
-                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                    <!-- Single gallery Item -->
+                                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                        <!-- Product Image -->
+                                        <div class="product-img">
+                                            <img src="https://3.imimg.com/data3/XI/KA/GLADMIN-1008/gold-bracelets-500x500.png" alt="">
+                                            <div class="product-quicview">
+                                                <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                        <!-- Product Description -->
+                                        <div class="product-description">
+                                            <h4 class="product-price">₹499.00</h4>
+                                            <p>Gold Bracelet </p>
+                                            <!-- Add to Cart -->
+                                            <a href="#" class="add-to-cart-btn">ADD TO CART</a>
                                         </div>
                                     </div>
-                                    <!-- Product Description -->
-                                    <div class="product-description">
-                                        <h4 class="product-price">₹499.00</h4>
-                                        <p>Gold Bracelet </p>
-                                        <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
-                                    </div>
-                                </div>
 
-                                <!-- Single gallery Item -->
-                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <img src="https://m.media-amazon.com/images/I/61STbn-m6ZL._UL1500_.jpg" alt="">
-                                        <div class="product-quicview">
-                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                    <!-- Single gallery Item -->
+                                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                        <!-- Product Image -->
+                                        <div class="product-img">
+                                            <img src="https://m.media-amazon.com/images/I/61STbn-m6ZL._UL1500_.jpg" alt="">
+                                            <div class="product-quicview">
+                                                <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                        <!-- Product Description -->
+                                        <div class="product-description">
+                                            <h4 class="product-price">₹599.00</h4>
+                                            <p>Diamond Bracelet </p>
+                                            <!-- Add to Cart -->
+                                            <a href="#" class="add-to-cart-btn">ADD TO CART</a>
                                         </div>
                                     </div>
-                                    <!-- Product Description -->
-                                    <div class="product-description">
-                                        <h4 class="product-price">₹599.00</h4>
-                                        <p>Diamond Bracelet </p>
-                                        <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
-                                    </div>
-                                </div>
 
-                                <!-- Single gallery Item -->
-                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <img src="https://img.joomcdn.net/5471f9e05e48591928914e94f7e10682edaa51f1_original.jpeg" alt="">
-                                        <div class="product-quicview">
-                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                    <!-- Single gallery Item -->
+                                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                        <!-- Product Image -->
+                                        <div class="product-img">
+                                            <img src="https://img.joomcdn.net/5471f9e05e48591928914e94f7e10682edaa51f1_original.jpeg" alt="">
+                                            <div class="product-quicview">
+                                                <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                        <!-- Product Description -->
+                                        <div class="product-description">
+                                            <h4 class="product-price">₹339.00</h4>
+                                            <p>Peacock Design Bracelet </p>
+                                            <!-- Add to Cart -->
+                                            <a href="#" class="add-to-cart-btn">ADD TO CART</a>
                                         </div>
                                     </div>
-                                    <!-- Product Description -->
-                                    <div class="product-description">
-                                        <h4 class="product-price">₹339.00</h4>
-                                        <p>Peacock Design Bracelet </p>
-                                        <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
-                                    </div>
-                                </div>
 
-                                <!-- Single gallery Item -->
-                                <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <img src="https://slimages.macysassets.com/is/image/MCY/products/3/optimized/10893093_fpx.tif?op_sharpen=1&wid=700&hei=855&fit=fit,1" alt="">
-                                        <div class="product-quicview">
-                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                    <!-- Single gallery Item -->
+                                    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item wow fadeInUpBig" data-wow-delay="0.4s">
+                                        <!-- Product Image -->
+                                        <div class="product-img">
+                                            <img src="https://slimages.macysassets.com/is/image/MCY/products/3/optimized/10893093_fpx.tif?op_sharpen=1&wid=700&hei=855&fit=fit,1" alt="">
+                                            <div class="product-quicview">
+                                                <a href="#" data-toggle="modal" data-target="#quickview"><i class="fa fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                        <!-- Product Description -->
+                                        <div class="product-description">
+                                            <h4 class="product-price">₹199.00</h4>
+                                            <p>Sterling Silver Bracelet </p>
+                                            <!-- Add to Cart -->
+                                            <a href="#" class="add-to-cart-btn">ADD TO CART</a>
                                         </div>
                                     </div>
-                                    <!-- Product Description -->
-                                    <div class="product-description">
-                                        <h4 class="product-price">₹199.00</h4>
-                                        <p>Sterling Silver Bracelet </p>
-                                        <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
-                                    </div>
+
+
+
                                 </div>
-
-
-
                             </div>
+
+
                         </div>
-
-
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
 
-    </div>
+        </div>
+    </form>
 </body>
 
 </html>

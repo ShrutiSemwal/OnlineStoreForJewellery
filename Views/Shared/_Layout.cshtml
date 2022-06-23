@@ -1,4 +1,6 @@
-
+@using Microsoft.AspNetCore.Http;
+@using OnlineStoreForJewellery.Utility;
+@inject IHttpContextAccessor HttpContextAccessor
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +9,9 @@
     <title>@ViewData["Title"] - Online Store for Jewellery</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.2/css/jquery.dataTables.min.css" />
     @RenderSection("Styles", required: false)
     @RenderSection("Styles1", required: false)
     @RenderSection("Styles2", required: false)
@@ -24,7 +28,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse ">
-                   
+
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
@@ -53,9 +57,9 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link text-light nav-link dropdown-toggle px-2" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Account">My Account</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li> <a class="nav-link text-dark" asp-area="Account" asp-controller="Home" asp-action="Wishlist"> My Wishlist</a></li>
+                                <li> <a class="nav-link text-dark" asp-area="Cart" asp-controller="Home" asp-action="Wishlist"> My Wishlist</a></li>
 
-                                <li>   <a class="nav-link text-dark" asp-area="Account" asp-controller="Home" asp-action="Orders">My Orders</a></li>
+                                <li>   <a class="nav-link text-dark" asp-area="Cart" asp-controller="Home" asp-action="Orders">My Orders</a></li>
 
                             </ul>
                         </li>
@@ -65,6 +69,20 @@
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
                         </li>
+                        @if (User.IsInRole(SD.Role_Admin))
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-light nav-link dropdown-toggle px-2" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Content Managment</a>
+                                <div class="dropdown-menu">
+                                    <a class="nav-link text-dark" asp-area="Admin" asp-controller="Item" asp-action="Index">Item</a>
+
+                                    <a class="nav-link text-dark" asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a>
+
+                                   
+                                </div>
+                            </li>
+                        }
+
 
                     </ul>
                     <br>
@@ -72,15 +90,16 @@
                         <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
                     </form>
                     <div class="text-end ">
-                        
+
                         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
 
                             <li>
-                                <a class="nav-link text-light" asp-area="Account" asp-controller="Home" asp-action="Cart"><img src="https://www.freeiconspng.com/thumbs/cart-icon/basket-cart-icon-27.png" width="50px" height="40px" /></a>
+                                <a class="nav-link text-light" asp-area="Cart" asp-controller="Cart" asp-action="Cart"><img src="https://www.freeiconspng.com/thumbs/cart-icon/basket-cart-icon-27.png" width="50px" height="40px" /></a>
                             </li>
 
                             @if (User.Identity.IsAuthenticated)
                             {
+
                                 <li>
                                     <a class="nav-link text-light" asp-area="" asp-controller="Account" asp-action="Logout">Logout</a>
                                 </li>
@@ -95,12 +114,12 @@
 
 
 
-                            <li>
-                                <a class="nav-link text-light" asp-area="" asp-controller="Account" asp-action="Register">Signup</a>
-                            </li>
+                                <li>
+                                    <a class="nav-link text-light" asp-area="" asp-controller="Account" asp-action="Register">Signup</a>
+                                </li>
                             }
                         </ul>
-                        
+
                     </div>
                 </div>
             </div>
@@ -108,6 +127,7 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
+            <partial name="_Notification" />
             @RenderBody()
         </main>
     </div>
@@ -225,6 +245,10 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.datatables.net/1.11.2/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/n94ifuzvl80pchikopiwgz2esrw8n28dwcywvpejlqrregfp/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

@@ -1,0 +1,135 @@
+﻿@model OnlineStoreForJewellery.ViewModel.ShoppingCartVM
+@using Microsoft.Extensions.Options
+<br />
+<br>
+<br>
+@{
+    ViewData["Title"] = "Checkout";
+}
+
+<div class="page-title-overlap bg-dark pt-4">
+    <div class="container d-lg-flex justify-content-between py-2 py-lg-3" style="background-color: #87413f ">
+
+        <div class="order-lg-1 pe-lg-4 text-center text-lg-start">
+            <h1 class="h3 text-light mb-0">Checkout</h1>
+        </div>
+    </div>
+</div>
+<form method="post">
+    <div class="container pb-5 mb-2 mb-md-4">
+        <div class="row">
+            <section class="col-lg-8">
+
+
+                <!-- Shipping address-->
+                <h2 class="h6 pt-1 pb-3 mb-3 border-bottom">Shipping address</h2>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label class="form-label" for="checkout-fn">First Name</label>
+                            <input asp-for="OrderHeader.Name" class="form-control" type="text" id="checkout-fn">
+                            <span asp-validation-for="OrderHeader.Name" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label class="form-label" for="checkout-phone">Phone Number</label>
+                            <input asp-for="OrderHeader.PhoneNumber" class="form-control" type="text" id="checkout-phone">
+                            <span asp-validation-for="OrderHeader.PhoneNumber" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label class="form-label" for="checkout-city">State</label>
+                            <input asp-for="OrderHeader.State" class="form-control" type="text" id="checkout-state">
+                            <span asp-validation-for="OrderHeader.State" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="checkout-city">City</label>
+                            <input asp-for="OrderHeader.City" class="form-control" type="text" id="checkout-city">
+                            <span asp-validation-for="OrderHeader.City" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label class="form-label" for="checkout-zip">Postal Code</label>
+                            <input asp-for="OrderHeader.PostalCode" class="form-control" type="text" id="checkout-zip">
+                            <span asp-validation-for="OrderHeader.PostalCode" class="text-danger"></span>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label class="form-label" for="checkout-address-1"> Street Address</label>
+                            <input asp-for="OrderHeader.StreetAddress" class="form-control" type="text" id="checkout-address-1">
+                            <span asp-validation-for="OrderHeader.StreetAddress" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                </div>
+                <h6 class="mb-3 py-3 border-bottom">Billing address</h6>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" checked id="same-address">
+                    <label class="form-check-label" for="same-address">Same as shipping address</label>
+                </div>
+                <!-- Navigation (desktop)-->
+                <div class="d-none d-lg-flex pt-4 mt-3">
+                    <div class="w-50 pe-3"><a class="btn btn-secondary d-block w-100 text-white" style="background-color: #87413f " asp-area="Cart" asp-controller="Cart" asp-action="Cart"><i class="ci-arrow-left mt-sm-0 me-1"></i><span class="d-none d-sm-inline">Back to Cart</span><span class="d-inline d-sm-none">Back</span></a></div>
+                    <div class="w-50 ps-2"><a class="btn btn-primary d-block w-100 text-white" value="Place Order" style="background-color: #87413f " asp-area="Cart" asp-controller="Cart" asp-action="Payment"><span class="d-none d-sm-inline">Proceed to Payment</span><span class="d-inline d-sm-none">Next</span><i class="ci-arrow-right mt-sm-0 ms-1"></i></a></div>
+                </div>
+            </section>
+            <!-- Sidebar-->
+            <aside class="col-lg-4 pt-4 pt-lg-0 ps-xl-5">
+                <div class="bg-white rounded-3 shadow-lg p-4 ms-lg-auto">
+                    <div class="py-2 px-xl-2">
+                        <div class="widget mb-3">
+                            <h2 class="widget-title text-center">Order summary</h2>
+                            @foreach (var details in Model.ListCart)
+                            {
+                                <div class="d-flex align-items-center pb-2 border-bottom">
+                                    <a class="d-block flex-shrink-0"><img src="@details.Product.ImageUrl" width="64" alt="Product"></a>
+                                    <div class="ps-2">
+                                        <h6 class="widget-product-title"><a style="color: #87413f " href="">@details.Product.Name</a></h6>
+                                        <small class="text-muted">Quantity: @details.Count</small>
+                                        <div class="widget-product-meta"><span class="text-accent me-2">@((details.Price * details.Count).ToString("c"))</span></div>
+                                    </div>
+                                </div>
+                            }
+
+
+                        </div>
+
+                    </div>
+                    <ul class="list-unstyled fs-sm pb-2 border-bottom">
+                        <li class="d-flex justify-content-between align-items-center"><span class="me-2">Subtotal:</span><span class="text-end">@Model.OrderHeader.OrderTotal.ToString("c")</span></li>
+                    </ul>
+                    <h3 class="fw-normal text-center my-4">@Model.OrderHeader.OrderTotal.ToString("c")</h3>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col-12 col-md-8 pt-2">
+                                <p style="color:maroon; font-size:14px;">
+                                    Estimate Arrival Date:
+                                    @DateTime.Now.AddDays(7).ToShortDateString() - @DateTime.Now.AddDays(14).ToShortDateString()
+                                </p>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <button type="submit" value="Place Order" class="btn btn-primary form-control">Place Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+    </form>

@@ -1,16 +1,22 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using OnlineStoreForJewellery.Models;
+using OnlineStoreForJewellery.ViewModel;
 using System;
 using System.Net;
 using System.Net.Mail;
+using OnlineStoreForJewellery.Repository.IRepository;
+using OnlineStoreForJewellery.Utility;
 //using MailKit.Net.Smtp;
 //using MimeKit;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
 using System.IO;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Security.Claims;
 
 namespace OnlineStoreForJewellery.Controllers
 {
@@ -20,7 +26,7 @@ namespace OnlineStoreForJewellery.Controllers
 
 
         private readonly ILogger<HomeController> _logger;
-
+        private readonly IUnitOfWork _unitOfWork;
 
 
         public HomeController(ILogger<HomeController> logger)
@@ -89,16 +95,10 @@ namespace OnlineStoreForJewellery.Controllers
             }
             catch (Exception)
             {
-                ViewBag.Error = "There are some problems is sending Email";
+                ViewBag.Error = "There are some problems in sending Email";
             }
 
             return View();
-        }
-
-
-        public IActionResult Cart()
-        {
-            return View("Views/Home/Account/Cart.cshtml");
         }
 
         public IActionResult Wishlist()
@@ -106,28 +106,66 @@ namespace OnlineStoreForJewellery.Controllers
             return View("Views/Home/Account/Wishlist.cshtml");
         }
 
-
-        public IActionResult Checkout()
-        {
-            return View("Views/Home/Account/Checkout.cshtml");
-        }
-
-        public IActionResult Payment()
-        {
-            return View("Views/Home/Account/Payment.cshtml");
-        }
-
-       
-
         public IActionResult Rings()
         {
             return View("Views/Home/Categories/Rings.cshtml");
         }
 
-        public IActionResult Bracelets()
+        /*public IActionResult Details(int productId)
         {
-            return View("Views/Home/Categories/Bracelets.cshtml");
+            ShoppingCart cartObj = new()
+            {
+                Count = 1,
+                ProductId = productId,
+                Product = _unitOfWork.Product.GetFirstOrDefault(u => u.Id == productId, includeProperties: "Category"),
+            };
+
+            return View(cartObj);
+        }*/
+
+        public IActionResult Bracelets(int productId)
+        {
+            ShoppingCart cartObj = new()
+            {
+                Count = 1,
+                ProductId = productId,
+                Product = _unitOfWork.Product.GetFirstOrDefault(u => u.Id == productId, includeProperties: "Item"),
+            };
+            return View("Views/Home/Categories/Bracelets.cshtml", cartObj);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize]
+        public IActionResult Bracelets(ShoppingCart shoppingCart)
+        {
+            var claimsIdentity = (ClaimsIdentity)User.Identity;
+            var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
+            shoppingCart.ApplicationUserId = claim.Value;
+
+            ShoppingCart cartFromDb = _unitOfWork.ShoppingCart.GetFirstOrDefault(
+                u => u.ApplicationUserId == claim.Value && u.ProductId == shoppingCart.ProductId);
+
+
+            if (cartFromDb == null)
+            {
+
+                _unitOfWork.ShoppingCart.Add(shoppingCart);
+                _unitOfWork.Save();
+                HttpContext.Session.SetInt32(SD.SessionCart,
+                    _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == claim.Value).ToList().Count);
+            }
+            else
+            {
+                _unitOfWork.ShoppingCart.IncrementCount(cartFromDb, shoppingCart.Count);
+                _unitOfWork.Save();
+            }
+
+
+            return RedirectToAction(nameof(Index));
+        }
+        
+
 
         public IActionResult Earrings()
         {

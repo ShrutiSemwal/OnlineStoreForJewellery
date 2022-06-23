@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using OnlineStoreForJewellery.Models;
 using OnlineStoreForJewellery.ViewModel;
+using OnlineStoreForJewellery.Utility;
 
 namespace OnlineStoreForJewellery.Controllers
 {
@@ -14,12 +15,15 @@ namespace OnlineStoreForJewellery.Controllers
     {
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
 
         public AccountController(UserManager<IdentityUser> userManager,
-                              SignInManager<IdentityUser> signInManager)
+                              SignInManager<IdentityUser> signInManager,
+                              RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _roleManager = roleManager;
         }
 
         public IActionResult Register()
@@ -36,6 +40,12 @@ namespace OnlineStoreForJewellery.Controllers
                     UserName = model.Email,
                     Email = model.Email,
                 };
+
+                if (!_roleManager.RoleExistsAsync(SD.Role_Admin).GetAwaiter().GetResult())
+                {
+                    _roleManager.CreateAsync(new IdentityRole(SD.Role_Admin)).GetAwaiter().GetResult();
+                    _roleManager.CreateAsync(new IdentityRole(SD.Role_User_Indi)).GetAwaiter().GetResult();
+                }
 
                 var result = await _userManager.CreateAsync(user, model.Password);
 

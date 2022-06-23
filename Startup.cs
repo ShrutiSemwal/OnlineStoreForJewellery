@@ -16,6 +16,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using OnlineStoreForJewellery.Repository;
+using OnlineStoreForJewellery.Repository.IRepository;
 
 namespace OnlineStoreForJewellery
 {
@@ -37,7 +39,14 @@ namespace OnlineStoreForJewellery
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             string connectionString = Configuration.GetConnectionString("default");
             services.AddDbContext<AppDBContext>(c => c.UseSqlServer(connectionString));
-            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppDBContext>();
+            services.AddIdentity<IdentityUser, IdentityRole>().AddDefaultTokenProviders().AddEntityFrameworkStores<AppDBContext>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = $"/Views/Account/Login";
+                options.LogoutPath = $"/Views/Account/Logout";
+                options.AccessDeniedPath = $"/Views/Account/AccessDenied";
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
