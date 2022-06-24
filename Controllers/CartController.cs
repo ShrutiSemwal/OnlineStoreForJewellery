@@ -61,13 +61,13 @@ namespace OnlineStoreForJewellery.Controllers
             ShoppingCartVM.OrderHeader.ApplicationUser = _unitOfWork.ApplicationUser.GetFirstOrDefault(
                 u => u.Id == claim.Value);
 
-            ShoppingCartVM.OrderHeader.Name = ShoppingCartVM.OrderHeader.ApplicationUser.FirstName;
-            ShoppingCartVM.OrderHeader.Name = ShoppingCartVM.OrderHeader.ApplicationUser.LastName;
-            ShoppingCartVM.OrderHeader.PhoneNumber = ShoppingCartVM.OrderHeader.ApplicationUser.PhoneNumber;
-            ShoppingCartVM.OrderHeader.StreetAddress = ShoppingCartVM.OrderHeader.ApplicationUser.StreetAddress;
-            ShoppingCartVM.OrderHeader.City = ShoppingCartVM.OrderHeader.ApplicationUser.City;
-            ShoppingCartVM.OrderHeader.State = ShoppingCartVM.OrderHeader.ApplicationUser.State;
-            ShoppingCartVM.OrderHeader.PostalCode = ShoppingCartVM.OrderHeader.ApplicationUser.PostalCode;
+            //ShoppingCartVM.OrderHeader.Name = ShoppingCartVM.OrderHeader.ApplicationUser.FirstName;
+            //ShoppingCartVM.OrderHeader.Name = ShoppingCartVM.OrderHeader.ApplicationUser.LastName;
+            ShoppingCartVM.OrderHeader.PhoneNumber = ShoppingCartVM?.OrderHeader?.ApplicationUser?.PhoneNumber;
+            ShoppingCartVM.OrderHeader.StreetAddress = ShoppingCartVM?.OrderHeader?.ApplicationUser?.StreetAddress;
+            ShoppingCartVM.OrderHeader.City = ShoppingCartVM?.OrderHeader?.ApplicationUser?.City;
+            ShoppingCartVM.OrderHeader.State = ShoppingCartVM?.OrderHeader?.ApplicationUser?.State;
+            ShoppingCartVM.OrderHeader.PostalCode = ShoppingCartVM?.OrderHeader?.ApplicationUser?.PostalCode;
 
 
             foreach (var cart in ShoppingCartVM.ListCart)
@@ -167,6 +167,11 @@ namespace OnlineStoreForJewellery.Controllers
                 return price;
             
         }
-        
+
+        public IActionResult Payment()
+        {
+            return View();
+        }
+
     }
 }
