@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using OnlineStoreForJewellery.Models;
+using Microsoft.AspNetCore.Session;
 using OnlineStoreForJewellery.ViewModel;
 using System;
 using System.Net;
@@ -103,7 +104,7 @@ namespace OnlineStoreForJewellery.Controllers
 
         public IActionResult Wishlist()
         {
-            return View("Views/Home/Account/Wishlist.cshtml");
+            return View("Views/Cart/Wishlist.cshtml");
         }
 
         public IActionResult Rings()
@@ -129,7 +130,7 @@ namespace OnlineStoreForJewellery.Controllers
             {
                 Count = 1,
                 ProductId = productId,
-                Product = _unitOfWork.Product.GetFirstOrDefault(u => u.Id == productId, includeProperties: "Item"),
+                Product = _unitOfWork?.Product?.GetFirstOrDefault(u => u.Id == productId, includeProperties: "Item"),
             };
             return View("Views/Home/Categories/Bracelets.cshtml", cartObj);
         }
@@ -143,22 +144,22 @@ namespace OnlineStoreForJewellery.Controllers
             var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
             shoppingCart.ApplicationUserId = claim.Value;
 
-            ShoppingCart cartFromDb = _unitOfWork.ShoppingCart.GetFirstOrDefault(
+            ShoppingCart cartFromDb = _unitOfWork?.ShoppingCart?.GetFirstOrDefault(
                 u => u.ApplicationUserId == claim.Value && u.ProductId == shoppingCart.ProductId);
 
 
             if (cartFromDb == null)
             {
 
-                _unitOfWork.ShoppingCart.Add(shoppingCart);
-                _unitOfWork.Save();
-                HttpContext.Session.SetInt32(SD.SessionCart,
-                    _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == claim.Value).ToList().Count);
+                _unitOfWork?.ShoppingCart?.Add(shoppingCart);
+                _unitOfWork?.Save();
+                //HttpContext.Session.SetInt32(SD.SessionCart,
+                   // _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == claim.Value).ToList().Count);
             }
             else
             {
-                _unitOfWork.ShoppingCart.IncrementCount(cartFromDb, shoppingCart.Count);
-                _unitOfWork.Save();
+                _unitOfWork?.ShoppingCart?.IncrementCount(cartFromDb, shoppingCart.Count);
+                _unitOfWork?.Save();
             }
 
 

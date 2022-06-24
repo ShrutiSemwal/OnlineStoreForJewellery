@@ -69,6 +69,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
                         </li>
+                        
                         @if (User.IsInRole(SD.Role_Admin))
                         {
                             <li class="nav-item dropdown">
@@ -78,7 +79,7 @@
 
                                     <a class="nav-link text-dark" asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a>
 
-                                   
+
                                 </div>
                             </li>
                         }
