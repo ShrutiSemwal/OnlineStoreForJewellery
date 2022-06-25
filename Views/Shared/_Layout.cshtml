@@ -96,6 +96,7 @@
                             @if (User.Identity.IsAuthenticated)
                             {
 
+                                <a class="nav-link text-light"> Hello,@User.Identity.Name</a>
                                 <li>
                                     <a class="nav-link text-light" asp-area="" asp-controller="Account" asp-action="Logout">Logout</a>
                                 </li>
