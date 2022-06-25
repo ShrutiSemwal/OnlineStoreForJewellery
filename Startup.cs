@@ -43,9 +43,9 @@ namespace OnlineStoreForJewellery
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.ConfigureApplicationCookie(options =>
             {
-                options.LoginPath = $"/Views/Account/Login";
-                options.LogoutPath = $"/Views/Account/Logout";
-                options.AccessDeniedPath = $"/Views/Account/AccessDenied";
+                options.LoginPath = $"/Account/Login";
+                options.LogoutPath = $"/Account/Logout";
+                options.AccessDeniedPath = $"/Account/AccessDenied";
             });
         }
 

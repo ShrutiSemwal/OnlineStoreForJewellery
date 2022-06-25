@@ -98,7 +98,7 @@
                                 <div class="d-flex align-items-center pb-2 border-bottom">
                                     <a class="d-block flex-shrink-0"><img src="@details.Product.ImageUrl" width="64" alt="Product"></a>
                                     <div class="ps-2">
-                                        <h6 class="widget-product-title"><a style="color: #87413f " href="">@details.Product.Name</a></h6>
+                                        <h6 class="widget-product-title"><a style="color: #87413f ">@details.Product.Name</a></h6>
                                         <small class="text-muted">Quantity: @details.Count</small>
                                         <div class="widget-product-meta"><span class="text-accent me-2">@((details.Price * details.Count).ToString("c"))</span></div>
                                     </div>
@@ -122,7 +122,7 @@
                                 </p>
                             </div>
                             <div class="col-12 col-md-4">
-                                <button type="submit" style="background-color: #87413f " value="Place Order" class="btn btn-primary d-block w-100 text-white form-control" asp-area="Cart" asp-controller="Cart" asp-action="Payment">Payment</button>
+                                <button type="submit" style="background-color: #87413f " value="Place Order" class="btn btn-primary d-block w-100 text-white form-control" asp-area="Cart" asp-controller="Cart" asp-action="Payment">Pay</button>
                             </div>
                         </div>
                     </div>
