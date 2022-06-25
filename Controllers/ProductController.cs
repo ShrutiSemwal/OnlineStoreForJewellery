@@ -16,8 +16,8 @@ using OnlineStoreForJewellery.ViewModel;
 namespace OnlineStoreForJewellery.Controllers
   
 {
-    [Area("Admin")]
-    [Authorize(Roles = SD.Role_Admin)]
+   
+    [Authorize]
     public class ProductController : Controller
     {
         

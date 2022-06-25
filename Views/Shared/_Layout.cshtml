@@ -69,21 +69,16 @@
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
                         </li>
-                        
-                        @if (User.IsInRole(SD.Role_Admin))
-                        {
-                            <li class="nav-item dropdown">
-                                <a class="nav-link text-light nav-link dropdown-toggle px-2" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Content Managment</a>
-                                <div class="dropdown-menu">
-                                    <a class="nav-link text-dark" asp-area="Admin" asp-controller="Item" asp-action="Index">Item</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-light nav-link dropdown-toggle px-2" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Account">Content Management</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li> <a class="nav-link text-dark" asp-area="" asp-controller="Item" asp-action="Index"> Item</a></li>
 
-                                    <a class="nav-link text-dark" asp-area="Admin" asp-controller="Product" asp-action="Index">Product</a>
+                                <li>   <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="Index">Product</a></li>
 
-
-                                </div>
-                            </li>
-                        }
-
+                            </ul>
+                        </li>
+                       
 
                     </ul>
                     <br>

@@ -10,8 +10,8 @@ using System.Threading.Tasks;
 
 namespace OnlineStoreForJewellery.Controllers
 {
-    [Area("Admin")]
-    [Authorize(Roles = SD.Role_Admin)]
+   
+    [Authorize]
     public class ItemController : Controller
     {
         
