@@ -1,12 +1,19 @@
 ﻿
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 <div class="container p-3">
     <div class="row pt-4">
         <div class="col-6">
-            <h2 class="text-primary">Product List</h2>
+            <h2 class="text-dark mb-0">Product List</h2>
         </div>
         <div class="col-6 text-end">
-            <a asp-area="" asp-controller="Product" asp-action="Upsert" class="btn btn-primary">
-                <i class="bi bi-plus-circle"></i> &nbsp; Create New Product
+            <a asp-area="" asp-controller="Product" asp-action="Upsert" class="btn btn-outline-accent text-white d-block w-100 mt-4" style="background-color: #87413f ">
+                <i class="fa fa-plus"></i> &nbsp; Create New Product
             </a>
         </div>
     </div>
@@ -18,12 +25,12 @@
                 <th>Name</th>
                 <th>Price</th>
                 <th>Item</th>
-                
+
             </tr>
         </thead>
     </table>
 </div>
 
 @section Scripts{
-<script src="~/js/product.js"></script>
+    <script src="~/js/product.js"></script>
 }

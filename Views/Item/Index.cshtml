@@ -4,15 +4,21 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 <div class="container p-3">
     <div class="row pt-4">
         <div class="col-6">
-            <h2 class="text-primary">Item List</h2>
+            <h2 class="text-dark mb-0" style="color: #87413f ">Item List</h2>
         </div>
         <div class="col-6 text-end">
-            <a asp-area="" asp-controller="Item" asp-action="Create" class="btn btn-primary">
-                <i class="bi bi-plus-circle"></i> &nbsp; Create New Item
+            <a asp-area="" asp-controller="Item" asp-action="Create" class="btn btn-outline-accent text-white d-block w-100 mt-4" style="background-color: #87413f ">
+                <i class="fa fa-plus"></i> &nbsp; Create New Item
             </a>
         </div>
     </div>
@@ -43,9 +49,9 @@
                     <td>
                         <div class="w-75 btn-group" role="group">
                             <a asp-controller="Item" asp-action="Edit" asp-route-id="@obj.Id"
-                               class="btn btn-primary mx-2"> <i class="bi bi-pencil-square"></i> Edit</a>
+                               class="btn btn-primary mx-2"> <i class="fa fa-pencil-square"></i> Edit</a>
                             <a asp-controller="Item" asp-action="Delete" asp-route-id="@obj.Id"
-                               class="btn btn-danger mx-2"> <i class="bi bi-trash-fill"></i> Delete</a>
+                               class="btn btn-danger mx-2"> <i class="fa fa-trash"></i> Delete</a>
                         </div>
                     </td>
                 </tr>
