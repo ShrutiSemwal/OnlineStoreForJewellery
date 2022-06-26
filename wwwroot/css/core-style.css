@@ -1515,9 +1515,7 @@ img {
 }
 
     .cart-total-chart li {
-        display: -moz-flex;
-        display: -ms-flex;
-        display: -o-flex;
+       
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;

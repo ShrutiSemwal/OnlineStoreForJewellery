@@ -85,7 +85,7 @@ namespace OnlineStoreForJewellery.Controllers
             {
                 _unitOfWork.Item.Update(obj);
                 _unitOfWork.Save();
-                TempData["success"] = "Category updated successfully";
+                TempData["success"] = "Item updated successfully";
                 return RedirectToAction("Index");
             }
             return View(obj);
@@ -122,7 +122,7 @@ namespace OnlineStoreForJewellery.Controllers
 
             _unitOfWork.Item.Remove(obj);
             _unitOfWork.Save();
-            TempData["success"] = "Category deleted successfully";
+            TempData["success"] = "Item deleted successfully";
             return RedirectToAction("Index");
         }
         
