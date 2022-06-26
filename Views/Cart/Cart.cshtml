@@ -7,7 +7,11 @@
 @{
     ViewData["Title"] = "Cart";
 }
-
+<br />
+<br />
+<br />
+<br />
+<br />
 <head>
 
     <script>
@@ -32,63 +36,63 @@
     </div>
 </div>
 
-    <div class="container pb-5 mb-2 mb-md-4">
-        <div class="row">
-           
-                <!-- List of items-->
-            <section class="col-lg-8">
-                <div class="d-flex justify-content-between align-items-center pt-3 pb-4 pb-sm-5 mt-1">
-                    <h2 class="h6 text-light mb-0">Products</h2><a class="btn btn-outline-primary btn-sm ps-2 text-white" style="background-color: #87413f " asp-area="" asp-controller="Home" asp-action="Index"><i class="ci-arrow-left me-2"></i>Continue shopping</a>
-                </div>
-                @foreach (var item in Model.ListCart)
-                {
-                    <!-- Item-->
-            <div class="d-sm-flex justify-content-between align-items-center my-2 pb-3 border-bottom">
-                <div class="d-block d-sm-flex align-items-center text-center text-sm-start">
-                    <a class="d-inline-block flex-shrink-0 mx-auto me-sm-4"><img src="@item.Product.ImageUrl" width="160" alt="Product"></a>
-                    <div class="pt-2">
-                        <h3 class="product-title fs-base mb-2"><a style="color: #87413f " href="">@item.Product.Name</a></h3>
-                        <div class="fs-sm"><span class="text-muted me-2"></span></div>
-                        <div class="fs-sm"><span class="text-muted me-2"></span></div>
-                        <div class="fs-lg text-accent pt-2">@item.Price.ToString("c")<span class="text-muted">&nbsp;x&nbsp;</span>@item.Count</div>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-4 col-lg-6 pt-2">
-                    <div class="w-75 btn-group" role="group">
-                        <a asp-action="plus" asp-route-cartId="@item.Id" class="btn btn-primary">
-                            <i class="bi bi-plus-square"></i>
-                        </a> &nbsp;
-                        <a asp-action="minus" asp-route-cartId="@item.Id" class="btn btn-warning">
-                            <i class="bi bi-dash-square"></i>
-                        </a>
-                    </div>
+<div class="container pb-5 mb-2 mb-md-4">
+    <div class="row">
 
-                </div>
-                <div class="pt-2 pt-sm-0 ps-sm-3 mx-auto mx-sm-0 text-center text-sm-start" style="max-width: 9rem;">
-                    <label class="form-label" for="quantity1">Quantity</label>
-                    <input class="form-control" type="number" id="quantity1" min="1" value="1">
-                    <button class="btn btn-link px-0 text-danger" asp-action="remove" asp-route-cartId="@item.Id" type="button"><i class="ci-close-circle me-2"></i><span class="fs-sm">Remove</span></button>
-                </div>
+        <!-- List of items-->
+        <section class="col-lg-8">
+            <div class="d-flex justify-content-between align-items-center pt-3 pb-4 pb-sm-5 mt-1">
+                <h2 class="h6 text-light mb-0">Products</h2><a class="btn btn-outline-primary btn-sm ps-2 text-white" style="background-color: #87413f " asp-area="" asp-controller="Home" asp-action="Index"><i class="ci-arrow-left me-2"></i>Continue shopping</a>
             </div>
-                }
-
-                <button class="btn btn-outline-accent text-white d-block w-100 mt-4" style="background-color: #87413f " type="button" asp-area="" asp-controller="Home" asp-action="Index"><i class="ci-loading fs-base me-2"></i>Update cart</button>
-            </section>
-                <!-- Sidebar-->
-                <aside class="col-lg-4 pt-4 pt-lg-0 ps-xl-5">
-                    <div class="bg-white rounded-3 shadow-lg p-4">
-                        <div class="py-2 px-xl-2">
-                            <div class="text-center mb-4 pb-3 border-bottom">
-                                <h2 class="h6 mb-3 pb-1">Subtotal</h2>
-                                <h3 class="fw-normal">@Model.OrderHeader.OrderTotal.ToString("c")</h3>
-                            </div>
-
-                        </div><a class="btn btn-primary btn-shadow d-block w-100 mt-4" style="background-color: #87413f " asp-area="Cart" asp-controller="Cart" asp-action="Checkout"><i class="ci-card fs-lg me-2"></i>Proceed to Checkout</a>
+            @foreach (var item in Model.ListCart)
+            {
+                <!-- Item-->
+                <div class="d-sm-flex justify-content-between align-items-center my-2 pb-3 border-bottom">
+                    <div class="d-block d-sm-flex align-items-center text-center text-sm-start">
+                        <a class="d-inline-block flex-shrink-0 mx-auto me-sm-4"><img src="@item.Product.ImageUrl" width="160" alt="Product"></a>
+                        <div class="pt-2">
+                            <h3 class="product-title fs-base mb-2"><a style="color: #87413f " href="">@item.Product.Name</a></h3>
+                            <div class="fs-sm"><span class="text-muted me-2"></span></div>
+                            <div class="fs-sm"><span class="text-muted me-2"></span></div>
+                            <div class="fs-lg text-accent pt-2">@item.Price.ToString("c")<span class="text-muted">&nbsp;x&nbsp;</span>@item.Count</div>
+                        </div>
                     </div>
-                </aside>
-            </div>
+                    <div class="col-6 col-sm-4 col-lg-6 pt-2">
+                        <div class="w-75 btn-group" role="group">
+                            <a asp-action="plus" asp-route-cartId="@item.Id" class="btn btn-primary">
+                                <i class="bi bi-plus-square"></i>
+                            </a> &nbsp;
+                            <a asp-action="minus" asp-route-cartId="@item.Id" class="btn btn-warning">
+                                <i class="bi bi-dash-square"></i>
+                            </a>
+                        </div>
 
+                    </div>
+                    <div class="pt-2 pt-sm-0 ps-sm-3 mx-auto mx-sm-0 text-center text-sm-start" style="max-width: 9rem;">
+                        <label class="form-label" for="quantity1">Quantity</label>
+                        <input class="form-control" type="number" id="quantity1" min="1" value="1">
+                        <button class="btn btn-link px-0 text-danger" asp-action="remove" asp-route-cartId="@item.Id" type="button"><i class="ci-close-circle me-2"></i><span class="fs-sm">Remove</span></button>
+                    </div>
+                </div>
+            }
+
+            <button class="btn btn-outline-accent text-white d-block w-100 mt-4" style="background-color: #87413f " type="button" asp-area="" asp-controller="Home" asp-action="Index"><i class="ci-loading fs-base me-2"></i>Update cart</button>
+        </section>
+        <!-- Sidebar-->
+        <aside class="col-lg-4 pt-4 pt-lg-0 ps-xl-5">
+            <div class="bg-white rounded-3 shadow-lg p-4">
+                <div class="py-2 px-xl-2">
+                    <div class="text-center mb-4 pb-3 border-bottom">
+                        <h2 class="h6 mb-3 pb-1">Subtotal</h2>
+                        <h3 class="fw-normal">@Model.OrderHeader.OrderTotal.ToString("c")</h3>
+                    </div>
+
+                </div><a class="btn btn-primary btn-shadow d-block w-100 mt-4" style="background-color: #87413f " asp-area="Cart" asp-controller="Cart" asp-action="Checkout"><i class="ci-card fs-lg me-2"></i>Proceed to Checkout</a>
+            </div>
+        </aside>
     </div>
+
+</div>
 
 
 

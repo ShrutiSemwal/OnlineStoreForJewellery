@@ -175,5 +175,12 @@ namespace OnlineStoreForJewellery.Controllers
           
         }
 
+        public IActionResult Orders()
+        {
+
+            return View();
+
+        }
+
     }
 }
