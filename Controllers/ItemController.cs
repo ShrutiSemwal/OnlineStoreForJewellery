@@ -47,7 +47,7 @@ namespace OnlineStoreForJewellery.Controllers
             {
                 _unitOfWork.Item.Add(obj);
                 _unitOfWork.Save();
-                TempData["success"] = "Category created successfully";
+                TempData["success"] = "Item created successfully";
                 return RedirectToAction("Index");
             }
             return View(obj);
