@@ -2,7 +2,7 @@
 
 An e-commerce platform developed to simplify and digitize the jewellery shopping experience. Built using **ASP.NET Core MVC**, **Bootstrap-5**, and **SQL Server**, this project was developed during an internship at Cognizant Technology Solutions as part of a B.Tech. CSE curriculum.
 
-![Homepage Screenshot](images/homepage.png)
+<img src="ss/Home1.png" width="600"/>
 
 ---
 
@@ -34,7 +34,8 @@ Jewellery shopping has evolved from traditional store visits to digital storefro
 - Login/logout functionality
 - Role-based access for users and admins
 
-![Login Page](images/login.png)
+<img src="ss/Login.png" width="600"/>
+<img src="ss/Signup.png" width="600"/>
 
 ---
 
@@ -43,7 +44,8 @@ Jewellery shopping has evolved from traditional store visits to digital storefro
 - Slider showcasing main collections
 - Category cards for browsing
 
-![Home Slider](images/slider.png)
+<img src="ss/Home2.png" width="600"/>
+<img src="ss/Home3.png" width="600"/>
 
 ---
 
@@ -52,16 +54,16 @@ Jewellery shopping has evolved from traditional store visits to digital storefro
 - Product display with add-to-cart functionality
 - 8 distinct product category pages
 
-![Collections](images/collections.png)
+<img src="ss/All1.png" width="600"/>
 
 ---
 
-### 4. My Account
+### 4. My Account - Future Scope of this project
 - **Wishlist**: Save items for future purchases
 - **Order History**: View and track order statuses
 - **Returns**: Request returns with feedback
 
-![Wishlist](images/wishlist.png)
+<img src="ss/Wishlist.png" width="600"/>
 
 ---
 
@@ -69,23 +71,25 @@ Jewellery shopping has evolved from traditional store visits to digital storefro
 - Display store location using Google Maps
 - Feedback submission via form using MailKit
 
-![Contact Page](images/contact.png)
+<img src="ss/Contact%20form.png" width="600"/>
+<img src="ss/Contact%20map.png" width="600"/>
 
 ---
 
 ### 6. About Us Page
 - Team information with social media links
 
-![About Us](images/aboutus.png)
+<img src="ss/About1.png" width="600"/>
 
 ---
 
-### 7. Cart System
+### 7. Cart System - Future Scope
 - Add/remove/update items in cart
 - Checkout flow with address and payment steps
 - Order summary and redirection to order tracking
 
-![Cart Page](images/cart.png)
+<img src="ss/Cart.png" width="600"/>
+<img src="ss/Checkout1.png" width="600"/>
 
 ---
 
@@ -93,12 +97,23 @@ Jewellery shopping has evolved from traditional store visits to digital storefro
 - CRUD operations for jewellery items and categories
 - Admin controls using Repository Pattern and Unit of Work
 
-![Admin CRUD](images/admin.png)
+#### Content Managenent
+<img src="ss/Home4.png" width="600"/>
+
+#### Item CRUD Operations
+<img src="ss/item%20create2.png" width="600"/>
+<img src="ss/item%20delete.png" width="600"/>
+<img src="ss/Item%20index.png" width="600"/>
+<img src="ss/item%20update2.png" width="600"/>
+
+#### Product CRUD Operations
+<img src="ss/product%20index.png" width="600"/>
+<img src="ss/product%20upsert3.png" width="600"/>
 
 ---
 
 ## 🔚 Conclusion
 
-This project demonstrates the development of a complete shopping cart system using modern .NET technologies. It focuses on usability, responsiveness, and real-world e-commerce functionalities. It served as an excellent hands-on learning experience in the corporate software development cycle using Agile methodologies.
+This project demonstrates the development of a basic web application using modern .NET technologies. It focuses on usability, responsiveness, and real-world e-commerce functionalities. It served as an excellent hands-on learning experience in the corporate software development cycle using Agile methodologies.
 
 ---
